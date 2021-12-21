@@ -32,8 +32,134 @@ a{
     position: relative;
     height: 100%;
     width: 100%;
+    padding-top: 7rem;
 }
-.page .page-sprite{
+.page > .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+.page > .cards > .card{
+    height: auto;
+    width: 18rem;
+    position: relative;
+    background: var(--light);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    margin: 1rem;
+    min-height: 300px;
+    transition: .2s ease-in-out;
+}
+.page > .cards > .card:hover,
+.page > .cards > .card:focus-within{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+.page > .cards > .card .card-thumbnail{
+    height: calc(9rem + 10px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--dark);
+    transition: .2s ease-in-out;
+}
+.page > .cards > .card .card-thumbnail.card-thumbnail-radius::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: var(--light);
+    border-radius: 10px 10px 0 0;
+}
+.page > .cards > .card .card-thumbnail > img{
+    max-height: 200%;
+    max-width: 200%;
+    object-fit: cover;
+}
+.page > .cards > .card .card-title{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+.page > .cards > .card .card-content{
+    padding: .5rem 1rem 4rem 1rem;
+    font-size: 1.1rem;
+    transition: .2s ease-in-out;
+    min-height: 200px;
+    color: var(--dark);
+}
+.page > .cards > .card .card-content .card-p{
+    display: block;
+    margin: 0;
+}
+.page > .cards > .card .card-content .card-p.justify{
+    text-align: justify;
+}
+.page > .cards > .card .card-content .card-p.center{
+    text-align: center;
+}
+.page > .cards > .card .card-content .card-p.right{
+    text-align: right;
+}
+.page > .cards > .card .card-content .card-p.left{
+    text-align: left;
+}
+.page > .cards > .card .card-content .card-btns{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+}
+.page > .cards > .card .card-content .card-btns.center{
+    justify-content: center;
+}
+.page > .cards > .card .card-content .card-btns > button,
+.page > .cards > .card .card-content .card-btns > a{
+    display: block;
+    text-align: center;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    color: var(--light);
+    background: var(--dark);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.6rem;
+    max-height: 2.5rem;
+    width: 100%;
+}
+.page > .cards > .card.crazy-hover:hover .card-thumbnail {
+    height: 0;
+    filter: blur(100px) saturate(150%);
+}
+.page > .cards > .card.crazy-hover:hover .card-thumbnail img{
+    width: 100%;
+}
+.page > .cards > .card.crazy-hover:hover .card-content{
+    min-height: calc(200px + 9rem);
+}
+
+.page > .page-sprite{
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +167,7 @@ a{
     height: 100%;
     z-index: 0;
 }
-.page .page-sprite .big-title{
+.page > .page-sprite .big-title{
     display: block;
     position: absolute;
     text-align: right;
@@ -52,8 +178,8 @@ a{
     right: 0;
     top: 50%;
 }
-.page .page-sprite .circle,
-.page .page-sprite .square{
+.page > .page-sprite .circle,
+.page > .page-sprite .square{
     position: absolute;
     border: currentColor solid 1rem;
     border-radius: 0.5rem;
@@ -61,10 +187,10 @@ a{
     width: 5rem;
     height: 5rem;
 }
-.page .page-sprite .circle{
+.page > .page-sprite .circle{
     border-radius: 50%;
 }
-.page .page-sprite .scroll-indicator{
+.page > .page-sprite .scroll-indicator{
     position: absolute;
     bottom: 0;
     left: 0;

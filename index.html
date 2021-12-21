@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/topbar.css">
-    <link rel="stylesheet" href="/styles/animation.css">
     <title>Ghexter Cortes</title>
 </head>
 <body>
@@ -25,14 +24,14 @@
                 <span style="color: var(--primary)">Ghexter</span><span style="color: var(--danger)">Cortes</span>
             </h1>
         </div>
-        <div class="page-sprite" style="overflow: hidden">
+        <div class="page-sprite">
             <span class="big-title">
                 GHEX<br>
                 TER.
             </span>
-            <!-- <span class="scroll-indicator">
+            <span class="scroll-indicator">
                 <i class="fas fa-caret-down"></i>
-            </span> -->
+            </span>
         </div>
     </div>
     <!-- <div class="about-page page" id="about">
@@ -42,10 +41,64 @@
             </div>
         </div>
     </div> -->
-    <!-- <div class="projects-page page" id="projects">
+    <div class="projects-page page" id="projects">
         <div class="nav">
-            <div class="nav-title center">
-                About Me
+            <div class="nav-title center" style="font-size: 3rem;">
+                Projects
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-thumbnail card-thumbnail-radius">
+                    <img src="/static/axis-cover.png" alt="">
+                </div>
+                <div class="card-title">
+                    Axis Project
+                </div>
+                <div class="card-content">
+                    <p class="card-p justify">
+                        Axis is just an empty Discord bot which simply loads custom javascript file in a specified folder.
+                        This loads scripts from a certain folder as a module according to their supported versions.
+                        Axis is a practice project so expect some inconsistencies in the source code.
+                    </p>
+                    <div class="card-btns center">
+                        <a href="https://github.com/FalloutStudios/Axis/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-thumbnail card-thumbnail-radius">
+                    <img src="/static/cat1.jpg" alt="">
+                </div>
+                <div class="card-title">
+                    HiddenPlayer Bot
+                </div>
+                <div class="card-content">
+                    <p class="card-p justify">
+                        HiddenPlayer is an afk bot that makes a non 24/7 server online for a long time.
+                        This was originally used for a server but shortly removed as it's a breach to the hosting TOS.
+                        The code is terrible because this became my first practice project on learning JavaScript before Axis.
+                    </p>
+                    <div class="card-btns center">
+                        <a href="https://github.com/FalloutStudios/HiddenPlayer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card crazy-hover">
+                <div class="card-thumbnail">
+                    <img src="/static/cat2.jpg" alt="">
+                </div>
+                <div class="card-title">
+                    Test
+                </div>
+                <div class="card-content">
+                    <p class="card-p center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur sagittis,
+                        nisl nunc ultrices eros, eu porttitor nisl nunc
+                        vitae nisl.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="page-sprite">
@@ -54,6 +107,6 @@
             <span class="circle" style="top: 58%; left: 57%;"></span>
             <span class="circle" style="top: 77%; left: 88%;"></span>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>
