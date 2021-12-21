@@ -1,0 +1,39 @@
+.top-bar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: #222;
+    color: #00c3ff;
+    padding: 1rem .5rem;
+    width: 100%;
+    height: auto;
+}
+
+.top-bar .top-bar-wrapper{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 1366px;
+}
+
+.top-bar .top-bar-whitespace{
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.top-bar .top-bar-container{
+    flex-shrink: 0;
+}
+
+.top-bar .title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 2rem;
+    color: inherit;
+}
