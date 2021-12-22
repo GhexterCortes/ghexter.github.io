@@ -294,7 +294,9 @@ a{
     justify-content: center;
     align-items: center;
     color: var(--light);
+    height: 100%;
     min-height: 500px;
+    max-height: 100vh;
 }
 
 .landing-page .landing-page-title{
