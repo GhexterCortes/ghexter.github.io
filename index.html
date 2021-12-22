@@ -21,7 +21,7 @@
             <h1>
                 Hello<span style="color: var(--danger)">,</span><br>
                 I'm<br>
-                <span style="color: var(--primary)">Ghexter</span><span style="color: var(--danger)">Cortes</span>
+                <span style="color: var(--primary)" class="name-1">Ghexter</span><span style="color: var(--danger)" class="name-2">Cortes</span>
             </h1>
         </div>
         <div class="page-sprite">
@@ -34,13 +34,38 @@
             </span>
         </div>
     </div>
-    <!-- <div class="about-page page" id="about">
+    <div class="about-page page" id="about">
         <div class="nav">
-            <div class="nav-title center">
+            <div class="nav-title center" style="font-size: 3rem;">
                 About Me
             </div>
         </div>
-    </div> -->
+        <div class="cards">
+            <div class="card full-width" style="background: var(--light);">
+                <div class="card-thumbnail card-thumbnail-radius">
+                    <img src="/static/me.jpg" alt="" height="1" width="1">
+                </div>
+                <div class="card-container">
+                    <div class="card-title" style="font-size: 2rem;">
+                        <span style="color: var(--dark)" class="name-1">Ghexter</span><span style="color: var(--primary)" class="name-2">Cortes</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-p justify">
+                            I'm a student developer and I'm currently learning <i class="fab fa-js-square"></i> <b>JavaScript</b>, <i class="fab fa-php"></i> <b>PHP</b>, <i class="fab fa-java"></i> <b>Java</b>.
+                            <br><br>
+                            You can call me <span style="color: var(--primary)"><b>Ghexter</b></span> or <span style="color: var(--danger)"><b>Ghex</b></span>.
+                        </p>
+                        <div class="card-btns inline center">
+                            <a href="https://github.com/GhexterCortes" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://discordapp.com/users/749120018771345488"><i class="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/CortesGhexter" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="instagram.com/ghex.e_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="projects-page page" id="projects">
         <div class="nav">
             <div class="nav-title center" style="font-size: 3rem;">
@@ -68,7 +93,7 @@
             </div>
             <div class="card">
                 <div class="card-thumbnail card-thumbnail-radius">
-                    <img src="/static/cat1.jpg" alt="">
+                    <img src="/static/hiddenplayer-cover.png" alt="">
                 </div>
                 <div class="card-title">
                     HiddenPlayer Bot
@@ -84,28 +109,36 @@
                     </div>
                 </div>
             </div>
-            <div class="card crazy-hover">
-                <div class="card-thumbnail">
-                    <img src="/static/cat2.jpg" alt="">
+            <div class="card">
+                <div class="card-thumbnail card-thumbnail-radius">
+                    <img src="/static/fallout-utility-cover.png" alt="">
                 </div>
                 <div class="card-title">
-                    Test
+                    Fallout Utility
                 </div>
                 <div class="card-content">
-                    <p class="card-p center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur sagittis,
-                        nisl nunc ultrices eros, eu porttitor nisl nunc
-                        vitae nisl.
+                    <p class="card-p justify">
+                        A utility module used for Fallout projects.
+                        This includes the main logger of Axis bot and some other utilities.
+                        This is still in development and is not meant to be used for anything else.
                     </p>
+                    <div class="card-btns center">
+                        <a href="https://github.com/FalloutStudios/fallout-utility" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.npmjs.com/package/fallout-utility" target="_blank"><i class="fab fa-npm"></i> NPM</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="page-sprite">
+        <div class="page-sprite overflow-h">
             <span class="circle" style="top: 88%; left: 22%;"></span>
             <span class="circle" style="top: 36%; left: 21%;"></span>
             <span class="circle" style="top: 58%; left: 57%;"></span>
             <span class="circle" style="top: 77%; left: 88%;"></span>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="name">
+            <span class="name-1">Ghexter</span><span class="name-2" style="color: var(--primary);">Cortes</span>
         </div>
     </div>
 </body>

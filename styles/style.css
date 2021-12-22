@@ -30,7 +30,7 @@ a{
 
 .page{
     position: relative;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     padding-top: 7rem;
 }
@@ -85,8 +85,8 @@ a{
     border-radius: 10px 10px 0 0;
 }
 .page > .cards > .card .card-thumbnail > img{
-    max-height: 200%;
-    max-width: 200%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
 }
 .page > .cards > .card .card-title{
@@ -107,6 +107,7 @@ a{
 .page > .cards > .card .card-content .card-p{
     display: block;
     margin: 0;
+    opacity: 0.8;
 }
 .page > .cards > .card .card-content .card-p.justify{
     text-align: justify;
@@ -131,6 +132,12 @@ a{
     padding: 1rem;
     width: 100%;
 }
+.page > .cards > .card .card-content .card-btns.inline{
+    display: inline-flex;
+    position: relative;
+    top: unset;
+    left: unset;
+}
 .page > .cards > .card .card-content .card-btns.center{
     justify-content: center;
 }
@@ -146,7 +153,20 @@ a{
     overflow: hidden;
     line-height: 1.6rem;
     max-height: 2.5rem;
+    margin: 0 .2rem;
     width: 100%;
+}
+.page > .cards > .card .card-content .card-btns.inline > button,
+.page > .cards > .card .card-content .card-btns.inline > a{
+    width: auto;
+}
+.page > .cards > .card .card-content .card-btns > button:first-child,
+.page > .cards > .card .card-content .card-btns > a:first-child{
+    margin-left: 0;
+}
+.page > .cards > .card .card-content .card-btns > button:last-child,
+.page > .cards > .card .card-content .card-btns > a:last-child{
+    margin-right: 0;
 }
 .page > .cards > .card.crazy-hover:hover .card-thumbnail {
     height: 0;
@@ -158,6 +178,31 @@ a{
 .page > .cards > .card.crazy-hover:hover .card-content{
     min-height: calc(200px + 9rem);
 }
+.page > .cards > .card.full-width{
+    width: calc(100% - 2rem);
+    max-width: 700px;
+    display: flex;
+}
+.page > .cards > .card.full-width .card-thumbnail{
+    max-height: 100%;
+    height: auto;
+    width: 50%;
+    flex-shrink: 0;
+    max-width: 10rem;
+    min-width: 300px;
+}
+.page > .cards > .card.full-width .card-thumbnail.card-thumbnail-radius::after{
+    right: 0;
+    top: 0;
+    left: unset;
+    height: 100%;
+    width: 10px;
+    border-radius: 10px 0 0 10px;
+}
+.page > .cards > .card.full-width .card-container{
+    flex-shrink: 1;
+    width: 100%;
+}
 
 .page > .page-sprite{
     position: absolute;
@@ -166,6 +211,9 @@ a{
     width: 100%;
     height: 100%;
     z-index: 0;
+}
+.page > .page-sprite.overflow-h{
+    overflow: hidden;
 }
 .page > .page-sprite .big-title{
     display: block;
@@ -177,6 +225,7 @@ a{
     opacity: 0.1;
     right: 0;
     top: 50%;
+    transition: .2s ease-in-out;
 }
 .page > .page-sprite .circle,
 .page > .page-sprite .square{
@@ -237,6 +286,7 @@ a{
     text-align: center;
 }
 
+
 /** Landing Page **/
 .landing-page{
     display: flex;
@@ -244,6 +294,7 @@ a{
     justify-content: center;
     align-items: center;
     color: var(--light);
+    min-height: 500px;
 }
 
 .landing-page .landing-page-title{
@@ -253,13 +304,13 @@ a{
     width: 100%;
     padding: 5rem;
     z-index: 1;
+    transition: .2s ease-in-out;
 }
-
 
 /** About Page **/
 .about-page {
     margin-top: 5rem;
-    color: var(--primary);
+    color: var(--success);
 }
 
 
@@ -267,4 +318,79 @@ a{
 .projects-page {
     margin-top: 5rem;
     color: var(--primary);
+}
+
+/** Footer **/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    padding: 2rem;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0.3);
+    color: var(--success);
+}
+
+@media screen and (max-width: 880px){
+    .page > .page-sprite .big-title{
+        font-size: 20rem;
+    }
+    .landing-page .landing-page-title{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 670px){
+    .page > .cards > .card.full-width{
+        display: block;
+        width: auto;
+        max-width: 500px;
+    }
+    .page > .cards > .card.full-width .card-thumbnail{
+        height: calc(14rem + 10px);
+        width: 100%;
+        max-width: 100%;
+    }
+    .page > .cards > .card.full-width .card-thumbnail.card-thumbnail-radius::after{
+        right: unset;
+        top: unset;
+        left: 0;
+        height: 10px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .page > .cards > .card.full-width .card-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 666px){
+    .page > .page-sprite .big-title{
+        font-size: 15rem;
+    }
+    .nav .nav-title{
+        margin-top: 5rem;
+    }
+    .nav {
+        height: 10rem;
+    }
+    .landing-page .landing-page-title{
+        font-size: 1.5rem;
+    }
+    .about-page,
+    .projects-page {
+        padding-top: 12rem;
+    }
+}
+@media screen and (max-width: 525px){
+    .landing-page .landing-page-title .name-2{
+        display: none;
+    }
+}
+@media screen and (max-width: 380px) {
+    .nav .nav-title{
+        padding: 3rem;
+    }
+    .landing-page .landing-page-title{
+        padding: 3rem;
+    }
 }
