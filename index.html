@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/default.css" id="style">
     <title id="title">Ghexter Cortes</title>
     <script>
-        setTitle(document.querySelector('#title'));
+        addEmotions(document.querySelector('#title'));
     </script>
 </head>
 <body>
@@ -17,7 +17,10 @@
         <div class="home-title">
             <div class="home-title-content">
                 <h1 class="home-title-main">I'm<br>Ghexter Cortes</h1>
-                <h3 class="home-title-sub">I write spaghettis :3</h3>
+                <h3 class="home-title-sub">I write spaghettis</h3>
+                <script>
+                    addEmotions(document.querySelector('.home-title-sub'));
+                </script>
             </div>
             <div class="home-title-floating">
                 <div class="home-title-image">
