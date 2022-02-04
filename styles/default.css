@@ -1,0 +1,163 @@
+@import url('/styles/style.css');
+
+/* Home */
+.home {
+    background-color: var(--black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    overflow: hidden;
+}
+.home .home-title {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1477px;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .home-title > .home-title-content {
+    width: 100%;
+    margin: 5rem;
+    position: relative;
+    z-index: 2;
+}
+.home .home-title > .home-title-content .home-title-main,
+.home .home-title > .home-title-content .home-title-sub {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+.home .home-title > .home-title-content .home-title-sub {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+.home .home-title > .home-title-floating {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--black);
+}
+.home .home-title > .home-title-floating .home-title-image {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    width: 400px;
+    height: 400px;
+    font-size: 20rem;
+    margin-right: 5rem;
+    box-shadow: 0 0 0 2px var(--purple), 5px 5px 0 5px var(--primary);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: font-size 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.home .home-title > .home-title-floating .home-title-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays > span {
+    font-weight: 800;
+    color: var(--white);
+    position: absolute;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays > span.home-title-overlay-1 {
+    top: -40%;
+    left: -14%;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays > span.home-title-overlay-2 {
+    top: -40%;
+    right: -14%;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays > span.home-title-overlay-3 {
+    bottom: -40%;
+    left: -10%;
+}
+.home .home-title > .home-title-floating .home-title-image > .home-title-overlays > span.home-title-overlay-4 {
+    bottom: -40%;
+    right: -10%;
+}
+
+@media (max-width: 1175px) {
+    .home .home-title > .home-title-floating .home-title-image {
+        width: 300px;
+        height: 300px;
+        font-size: 15rem;
+    }
+}
+@media (max-width: 933px) {
+    .home .home-title > .home-title-floating .home-title-image {
+        margin-right: 0rem;
+    }
+    .home .home-title > .home-title-content {
+        margin: 3rem;
+    }
+}
+@media (max-width: 777px) {
+    .home .home-title > .home-title-content .home-title-sub {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .home .home-title {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .home-title > .home-title-floating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }
+    .home .home-title > .home-title-floating .home-title-image {
+        position: relative;
+        margin: 5rem 3rem;
+        top: 0;
+        left: 0;
+        height: 200px;
+        width: 200px;
+        font-size: 10rem;
+        transform: unset;
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+}
+    .home .home-title > .home-title-content {
+        padding: 0 3rem 3rem 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .home .home-title > .home-title-content .home-title-main {
+        font-size: 2rem;
+    }
+}   

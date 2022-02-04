@@ -4,139 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script buffer src="/scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/topbar.css">
-    <title>Ghexter Cortes</title>
+    <link rel="stylesheet" href="/styles/default.css" id="style">
+    <title id="title">Ghexter Cortes</title>
+    <script>
+        setTitle(document.querySelector('#title'));
+    </script>
 </head>
 <body>
-    <div class="landing-page page" id="home">
-        <div class="nav">
-            <div class="nav-title">
-                Ghex
+    <div class="home page">
+        <div class="home-title">
+            <div class="home-title-content">
+                <h1 class="home-title-main">I'm<br>Ghexter Cortes</h1>
+                <h3 class="home-title-sub">I write spaghettis :3</h3>
             </div>
-        </div>
-        <div class="landing-page-title">
-            <h1>
-                Hello<span style="color: var(--danger)">,</span><br>
-                I'm<br>
-                <span style="color: var(--primary)" class="name-1">Ghexter</span><span style="color: var(--danger)" class="name-2">Cortes</span>
-            </h1>
-        </div>
-        <div class="page-sprite">
-            <span class="big-title">
-                GHEX<br>
-                TER.
-            </span>
-            <span class="scroll-indicator">
-                <i class="fas fa-caret-down"></i>
-            </span>
-        </div>
-    </div>
-    <div class="about-page page" id="about" style="min-height: unset;">
-        <div class="nav">
-            <div class="nav-title center" style="font-size: 3rem;">
-                About Me
-            </div>
-        </div>
-        <div class="cards">
-            <div class="card full-width" style="background: var(--light);">
-                <div class="card-thumbnail card-thumbnail-radius">
-                    <img src="https://avatars.githubusercontent.com/u/69035887?v=4" alt="" height="1" width="1">
-                </div>
-                <div class="card-container">
-                    <div class="card-title" style="font-size: 2rem;">
-                        <span style="color: var(--dark)" class="name-1">Ghexter</span> <span style="color: var(--primary)" class="name-2">Cortes</span>
-                    </div>
-                    <div class="card-content">
-                        <p class="card-p justify">
-                            I'm a student developer and I'm currently learning <i class="fab fa-js-square"></i> <b>JavaScript</b>, <i class="fab fa-python"></i> <b>Python</b>, <i class="fab fa-php"></i> <b>PHP</b>, <i class="fab fa-java"></i> <b>Java</b>.
-                            <br><br>
-                            You can call me <span style="color: var(--primary)"><b>Ghexter</b></span> or <span style="color: var(--danger)"><b>Ghex</b></span>.
-                        </p>
-                        <div class="card-btns inline center">
-                            <a href="https://github.com/GhexterCortes" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://discordapp.com/users/749120018771345488"><i class="fab fa-discord"></i></a>
-                            <a href="https://twitter.com/CortesGhexter" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://instagram.com/ghex.e_/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+            <div class="home-title-floating">
+                <div class="home-title-image">
+                    <img src="https://avatars.githubusercontent.com/u/69035887?v=4" alt="GitHub Avatar">
+                    <span class="home-title-overlays">
+                        <span class="home-title-overlay-1">G</span>
+                        <span class="home-title-overlay-2">H</span>
+                        <span class="home-title-overlay-3">E</span>
+                        <span class="home-title-overlay-4">X</span>
+                    </span>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="projects-page page" id="projects">
-        <div class="nav">
-            <div class="nav-title center" style="font-size: 3rem;">
-                Projects
-            </div>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <div class="card-thumbnail card-thumbnail-radius">
-                    <img src="/static/axis-cover.png" alt="">
-                </div>
-                <div class="card-title">
-                    Axis Project
-                </div>
-                <div class="card-content">
-                    <p class="card-p justify">
-                        Axis is a Discord bot that loads modules that contains commands and other functions to easily build your bot by adding those scrips made for your supported Axis version.
-                    </p>
-                    <div class="card-btns center">
-                        <a href="https://github.com/FalloutStudios/Axis/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail card-thumbnail-radius">
-                    <img src="/static/hiddenplayer-cover.png" alt="">
-                </div>
-                <div class="card-title">
-                    HiddenPlayer Bot
-                </div>
-                <div class="card-content">
-                    <p class="card-p justify">
-                        HiddenPlayer is an afk bot that makes a non 24/7 server online for a long time.
-                        This was originally used for a server but shortly removed as it's a breach to the hosting TOS.
-                        The code is terrible because this became my first practice project on learning JavaScript before Axis.
-                    </p>
-                    <div class="card-btns center">
-                        <a href="https://github.com/FalloutStudios/HiddenPlayer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-thumbnail card-thumbnail-radius">
-                    <img src="/static/fallout-utility-cover.png" alt="">
-                </div>
-                <div class="card-title">
-                    Fallout Utility
-                </div>
-                <div class="card-content">
-                    <p class="card-p justify">
-                        A utility module used for Fallout projects.
-                        This includes the main logger of Axis bot and some other utilities.
-                        This is still in development and is not meant to be used for anything else.
-                    </p>
-                    <div class="card-btns center">
-                        <a href="https://github.com/FalloutStudios/fallout-utility" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.npmjs.com/package/fallout-utility" target="_blank"><i class="fab fa-npm"></i> NPM</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page-sprite overflow-h">
-            <span class="circle" style="top: 88%; left: 22%;"></span>
-            <span class="circle" style="top: 36%; left: 21%;"></span>
-            <span class="circle" style="top: 58%; left: 57%;"></span>
-            <span class="circle" style="top: 77%; left: 88%;"></span>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="name">
-            <span class="name-1">Ghexter</span><span class="name-2" style="color: var(--primary);">Cortes</span>
         </div>
     </div>
 </body>
