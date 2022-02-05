@@ -7,7 +7,7 @@
     display: flex;
     font-family: 'Jost', sans-serif;
     justify-content: center;
-    min-height: 500px;
+    min-height: 600px;
     overflow: hidden;
 }
 .home .home-title {
@@ -138,6 +138,7 @@
         justify-content: center;
         align-items: center;
         padding-right: 10px;
+        padding-top: 5rem;
     }
     .home .home-title > .home-title-floating .home-title-image {
         position: relative;
@@ -152,7 +153,7 @@
         -moz-transform: unset;
         -ms-transform: unset;
         -o-transform: unset;
-}
+    }
     .home .home-title > .home-title-content {
         padding: 0 3rem 3rem 3rem;
         margin-bottom: 3rem;
@@ -160,6 +161,9 @@
     }
     .home .home-title > .home-title-content .home-title-main {
         font-size: 2rem;
+    }
+    .home .home-title > .home-title-content .home-title-sub {
+        font-size: 1rem;
     }
 }
 
