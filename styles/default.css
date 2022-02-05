@@ -198,6 +198,7 @@
     color: var(--primary);
     text-decoration: none;
     font-size: 1.4rem;
+    flex-shrink: 0;
     background-color: var(--black);
     box-shadow: 0 0 0 2px var(--purple), 3px 3px 0 3px var(--primary);
     border-radius: 0px;
@@ -214,10 +215,70 @@
 .about .about-content > .about-container .about-buttons > *:hover,
 .about .about-content > .about-container .about-buttons > *:focus,
 .about .about-content > .about-container .about-buttons > *:focus-within {
-    transform: translateY(-2px) translateX(-2px);
+    color: var(--white);
+    background: linear-gradient(45deg, var(--primary) 0%, var(--purple) 100%);
     box-shadow: 0 0 0 2px var(--purple), 5px 5px 0 3px var(--primary);
+    transform: translateY(-2px) translateX(-2px);
     -webkit-transform: translateY(-2px) translateX(-2px);
     -moz-transform: translateY(-2px) translateX(-2px);
     -ms-transform: translateY(-2px) translateX(-2px);
     -o-transform: translateY(-2px) translateX(-2px);
+}
+
+@media (max-width: 514px) {
+    .about .about-content > .about-container .about-buttons > *{
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 475px) {
+    .about .about-content > .about-container{
+        margin: 0 3rem;
+        width: calc(100% - 6rem);
+    }
+    .about .page-title > * {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        width: calc(100% - 6rem);
+    }
+}
+@media (max-width: 375px) {
+    .about .about-content > .about-container{
+        margin: 0 2rem;
+        width: calc(100% - 4rem);
+    }
+    .about .page-title > * {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: calc(100% - 4rem);
+    }
+}
+@media (max-width: 330px) {
+    .about .about-content > .about-container .about-buttons {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .about .about-content > .about-container .about-buttons > *{
+        height: 35px;
+        width: 35px;
+        font-size: 1rem;
+        box-shadow: none;
+        margin-right: 0rem;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+    .about .about-content > .about-container .about-buttons > *:hover,
+    .about .about-content > .about-container .about-buttons > *:focus,
+    .about .about-content > .about-container .about-buttons > *:focus-within {
+        box-shadow: none;
+        transform: translateY(0px) translateX(0px);
+        -webkit-transform: translateY(0px) translateX(0px);
+        -moz-transform: translateY(0px) translateX(0px);
+        -ms-transform: translateY(0px) translateX(0px);
+        -o-transform: translateY(0px) translateX(0px);
+}
 }
