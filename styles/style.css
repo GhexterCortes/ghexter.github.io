@@ -89,3 +89,87 @@ img.emoji {
     background: linear-gradient(to right, var(--primary), var(--purple));
     display: inline-block;
 }
+
+@keyframes ms-motion-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ms-motion-fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ms-motion-scaleDownIn {
+    from {
+        transform: scale3d(1.15,1.15,1);
+    }
+    to {
+        transform: scale3d(1,1,1);
+    }
+}
+
+@keyframes ms-motion-scaleDownOut {
+    from {
+        transform: scale3d(1,1,1);
+    }
+    to {
+        transform: scale3d(1.15,1.15,1);
+    }
+}
+
+@keyframes ms-motion-slideUpIn {
+    from {
+        transform: translate3d(0,48px,0);
+    }
+    to {
+        transform: translate3d(0,0,0);
+    }
+}
+
+@keyframes ms-motion-slideUpOut {
+    from {
+        transform: translate3d(0,0,0);
+    }
+    to {
+        transform: translate3d(0,48px,0);
+    }
+}
+
+.ms-motion-fadeIn {
+    animation: ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+}
+
+.ms-motion-fadeOut {
+    animation: ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+}
+
+.ms-motion-scaleDownIn {
+    animation: ms-motion-scaleDownIn .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-scaleDownIn .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+}
+
+.ms-motion-scaleDownOut {
+    animation: ms-motion-scaleDownOut .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-scaleDownOut .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+}
+
+.ms-motion-slideUpIn {
+    animation: ms-motion-slideUpIn .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-slideUpIn .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeIn .1s cubic-bezier(0,0,1,1) both;
+}
+
+.ms-motion-slideUpOut {
+    animation: ms-motion-slideUpOut .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+    -webkit-animation: ms-motion-slideUpOut .2s cubic-bezier(.1,.9,.2,1) both, ms-motion-fadeOut .1s cubic-bezier(0,0,1,1) both;
+}

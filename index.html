@@ -17,8 +17,8 @@
     <div class="home page page-minH500">
         <div class="home-title">
             <div class="home-title-content">
-                <h1 class="home-title-main">I<span style="color: var(--primary)">'</span>m<br>Ghexter Cortes</h1>
-                <h3 class="home-title-sub">I write spaghettis</h3>
+                <h1 class="home-title-main ms-motion-scaleDownIn" style="animation-delay: 0.3s;">I<span style="color: var(--primary)">'</span>m<br>Ghexter Cortes</h1>
+                <h3 class="home-title-sub ms-motion-scaleDownIn" style="animation-delay: 0.35s;">I write spaghettis</h3>
                 <script>
                     addEmotions(document.querySelector('.home-title-sub'), [
                         'I write spaghettis',
@@ -31,14 +31,14 @@
                     ]);
                 </script>
             </div>
-            <div class="home-title-floating">
+            <div style="animation-delay: 0.1s;" class="ms-motion-scaleDownIn home-title-floating">
                 <div class="home-title-image">
                     <img src="https://avatars.githubusercontent.com/u/69035887?v=4" alt="GitHub Avatar">
                     <span class="home-title-overlays">
-                        <span class="home-title-overlay-1">G</span>
-                        <span class="home-title-overlay-2">H</span>
-                        <span class="home-title-overlay-3">E</span>
-                        <span class="home-title-overlay-4">X</span>
+                        <span class="home-title-overlay-1 ms-motion-scaleDownIn" style="animation-delay: 0.3s;">G</span>
+                        <span class="home-title-overlay-2 ms-motion-scaleDownIn" style="animation-delay: 0.35s;">H</span>
+                        <span class="home-title-overlay-3 ms-motion-scaleDownIn" style="animation-delay: 0.4s;">E</span>
+                        <span class="home-title-overlay-4 ms-motion-scaleDownIn" style="animation-delay: 0.45s;">X</span>
                     </span>
                 </div>
             </div>
@@ -85,7 +85,7 @@
             <h2>Featured Projects</h2>
         </div>
         <div class="projects-content">
-            <div class="projects-container">
+            <div class="projects-container" id="prjc">
                 <div class="project-card">
                     <div class="project-thumbnail">
                         <img src="https://i.imgur.com/HA1La3O.png" alt="">
@@ -100,7 +100,7 @@
                             </p>
                             <div class="project-links">
                                 <a href="https://github.com/FalloutStudios/Reciple" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://www.npmjs.com/package/reciple" target="_blank" title="GitHub"><i class="fab fa-npm"></i></a>
+                                <a href="https://www.npmjs.com/package/reciple" target="_blank" title="npm"><i class="fab fa-npm"></i></a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                             </p>
                             <div class="project-links">
                                 <a href="https://github.com/FalloutStudios/fallout-utility" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://www.npmjs.com/package/fallout-utility" target="_blank" title="GitHub"><i class="fab fa-npm"></i></a>
+                                <a href="https://www.npmjs.com/package/fallout-utility" target="_blank" title="npm"><i class="fab fa-npm"></i></a>
                             </div>
                         </div>
                     </div>

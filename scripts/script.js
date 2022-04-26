@@ -5,7 +5,7 @@ function addEmotions(element, text, emotes = titles) {
     text = text || element.innerHTML;
     text = typeof text === 'string' ? [text] : text;
 
-    element.innerHTML = `${text[Math.floor(Math.random() * text.length)]} ${emotes[Math.floor(Math.random() * emotes.length)]}`;
+    element.innerHTML = `<span class="ms-motion-scaleDownIn" style="display: inline-block;">${text[Math.floor(Math.random() * text.length)]} ${emotes[Math.floor(Math.random() * emotes.length)]}</span>`;
 
     setTimeout(() => {
         addEmotions(element, text, emotes);
