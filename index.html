@@ -22,10 +22,11 @@
                 <script>
                     addEmotions(document.querySelector('.home-title-sub'), [
                         'I write spaghettis',
-                        'Doing your Homework',
-                        'I\'m a programmer',
+                        'Doing Homework',
                         'Currently noob',
                         'I like cats and doggos',
+                        'Still learning',
+                        'You\'re cool',
                         'You\'re sus'
                     ]);
                 </script>
@@ -63,10 +64,13 @@
                 </div>
                 <script>
                     const meow = document.querySelector('.meow');
-                    meow.addEventListener('mousedown', () => {
+                    meow.addEventListener('mouseover', () => {
                         meow.innerHTML = '<img src="https://emoji.gg/assets/emoji/7482-uwucat.png" class="emoji" alt="cat">';
                     });
-                    meow.addEventListener('mouseup', () => {
+                    meow.addEventListener('focus', () => {
+                        meow.innerHTML = '<img src="https://emoji.gg/assets/emoji/7482-uwucat.png" class="emoji" alt="cat">';
+                    });
+                    meow.addEventListener('blur', () => {
                         meow.innerHTML = '<i class="fas fa-envelope-square"></i>';
                     });
                     meow.addEventListener('mouseout', () => {
@@ -84,11 +88,30 @@
             <div class="projects-container">
                 <div class="project-card">
                     <div class="project-thumbnail">
+                        <img src="https://i.imgur.com/HA1La3O.png" alt="">
+                    </div>
+                    <div class="project-card-container">
+                        <div class="page-title">
+                            <h3>Reciple</h3>
+                        </div>
+                        <div class="project-card-content">
+                            <p class="project-description">
+                                It's a modular Discord.js bot similar to Axis, but it's not deprecated and written in typescript. To run reciple, unlike Axis, you don't need to download the entire repo; simply install it and type the command.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/FalloutStudios/Reciple" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.npmjs.com/package/reciple" target="_blank" title="GitHub"><i class="fab fa-npm"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumbnail">
                         <img src="https://i.imgur.com/0o81Mvs.png" alt="">
                     </div>
                     <div class="project-card-container">
                         <div class="page-title">
-                            <h3>Axis</h3>
+                            <h3>Axis (Deprecated)</h3>
                         </div>
                         <div class="project-card-content">
                             <p class="project-description">
@@ -100,32 +123,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="https://i.imgur.com/HA1La3O.png" alt="">
-                    </div>
-                    <div class="project-card-container">
-                        <div class="page-title">
-                            <h3>Reciple</h3>
-                        </div>
-                        <div class="project-card-content">
-                            <p class="project-description">
-                                A modular Discord.js bot loader.
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/FalloutStudios/Reciple" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://www.npmjs.com/package/reciple" target="_blank" title="GitHub"><i class="fab fa-npm"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="project-card card-reverse">
                     <div class="project-thumbnail">
                         <img src="/static/hiddenplayer-cover.png" alt="">
                     </div>
                     <div class="project-card-container">
                         <div class="page-title">
-                            <h3>HiddenPlayer</h3>
+                            <h3>HiddenPlayer (Inactive)</h3>
                         </div>
                         <div class="project-card-content">
                             <p class="project-description">
