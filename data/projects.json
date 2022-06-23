@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Reciple",
+        "description": "It's a modular Discord.js bot similar to Axis, but it's not deprecated and written in typescript. To run reciple, unlike Axis, you don't need to download the entire repo; simply install it and type the command.",
+        "thumbnail": "https://i.imgur.com/HA1La3O.png",
+        "deprecated": false,
+        "links": {
+            "github": "https://github.com/FalloutStudios/Reciple",
+            "npm": "https://www.npmjs.com/package/reciple"
+        }
+    }
+]
