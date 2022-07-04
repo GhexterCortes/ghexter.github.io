@@ -4,167 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/scripts/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/default.css" id="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/69035887?v=4" type="image/x-icon">
-    <title id="title">Ghexter Cortes</title>
-    <script>
-        addEmotions(document.querySelector('#title'));
-    </script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" crossorigi="anonymous"></script>
+    <script src="./scripts/script.js" type="module"></script>
+    <title id="document-title">Ghex</title>
 </head>
 <body>
-    <div class="home page page-minH500">
-        <div class="home-title">
-            <div class="home-title-content">
-                <h1 class="home-title-main ms-motion-scaleDownIn" style="animation-delay: 0.3s;">I<span style="color: var(--primary)">'</span>m<br>Ghexter Cortes</h1>
-                <h3 class="home-title-sub ms-motion-scaleDownIn" style="animation-delay: 0.35s;">I write spaghettis</h3>
-                <script>
-                    addEmotions(document.querySelector('.home-title-sub'), [
-                        'I write spaghettis',
-                        'Doing Homework',
-                        'Currently noob',
-                        'I like cats and doggos',
-                        'Still learning',
-                        'You\'re cool',
-                        'You\'re sus'
-                    ]);
-                </script>
-            </div>
-            <div style="animation-delay: 0.1s;" class="ms-motion-scaleDownIn home-title-floating">
-                <div class="home-title-image">
-                    <img src="https://avatars.githubusercontent.com/u/69035887?v=4" alt="GitHub Avatar">
-                    <span class="home-title-overlays">
-                        <span class="home-title-overlay-1 ms-motion-scaleDownIn" style="animation-delay: 0.3s;">G</span>
-                        <span class="home-title-overlay-2 ms-motion-scaleDownIn" style="animation-delay: 0.35s;">H</span>
-                        <span class="home-title-overlay-3 ms-motion-scaleDownIn" style="animation-delay: 0.4s;">E</span>
-                        <span class="home-title-overlay-4 ms-motion-scaleDownIn" style="animation-delay: 0.45s;">X</span>
-                    </span>
-                </div>
-            </div>
-        </div>
+    <div class="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(241, 242, 243, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <rect x="18.5" y="32" width="13" height="36" fill="currentColor">
+              <animate attributeName="y" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="14;32;32" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.15625s"></animate>
+              <animate attributeName="height" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="72;36;36" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.15625s"></animate>
+            </rect>
+            <rect x="43.5" y="32" width="13" height="36" fill="currentColor">
+              <animate attributeName="y" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="18.5;32;32" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.078125s"></animate>
+              <animate attributeName="height" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="63;36;36" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.078125s"></animate>
+            </rect>
+            <rect x="68.5" y="32" width="13" height="36" fill="currentColor">
+              <animate attributeName="y" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="18.5;32;32" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+              <animate attributeName="height" repeatCount="indefinite" dur="0.78125s" calcMode="spline" keyTimes="0;0.5;1" values="63;36;36" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+            </rect>
+        </svg>
     </div>
-    <div class="about page">
-        <div class="page-title">
-            <h2>About Me</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-container">
-                <p class="about-description">
-                    Hello, my name is Ghexter <img src="https://emoji.gg/assets/emoji/1742-meowe.png" alt="Meow" class="emoji">.
-                    I'm a student developer who is currently doing nothing <img src="https://emoji.gg/assets/emoji/5498_catJAM.gif" alt="Cat vibin" class="emoji">.
-                    I'm 15 years old and I'm learning HTML, CSS, JavaScript, PHP, Python, Java, and Rust programming. 
-                </p>
-                <div class="about-buttons">
-                    <a href="https://github.com/GhexterCortes" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://discordapp.com/users/749120018771345488" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="https://twitter.com/CortesGhexter" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="http://https://instagram.com/ghex.e_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:ghextershumies@gmail.com" target="_blank" title="Email" class="meow"><i class="fas fa-envelope-square"></i></a>
-                </div>
-                <script>
-                    const meow = document.querySelector('.meow');
-                    meow.addEventListener('mouseover', () => {
-                        meow.innerHTML = '<img src="https://emoji.gg/assets/emoji/7482-uwucat.png" class="emoji" alt="cat">';
-                    });
-                    meow.addEventListener('focus', () => {
-                        meow.innerHTML = '<img src="https://emoji.gg/assets/emoji/7482-uwucat.png" class="emoji" alt="cat">';
-                    });
-                    meow.addEventListener('blur', () => {
-                        meow.innerHTML = '<i class="fas fa-envelope-square"></i>';
-                    });
-                    meow.addEventListener('mouseout', () => {
-                        meow.innerHTML = '<i class="fas fa-envelope-square"></i>';
-                    });
-                </script>
+    <div class="document unloaded">
+        <div class="nav">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/GhexterCortes/ghextercortes.github.io" target="_blank">GitHub</a>
             </div>
         </div>
-    </div>
-    <div class="projects page">
-        <div class="page-title">
-            <h2>Featured Projects</h2>
+        <div class="home">
+            <div class="home-contents">
+                <div class="home-background">
+                    <div class="scroll-down-indicator">
+                        <span>Scroll!</span>
+                        <i class="fa fa-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="title-container">
+                    <h1 class="title">
+                        <span class="title-char">G</span><span class="title-char">H</span><span class="title-decoration" style="background: transparent"></span><br>
+                        <span class="title-char">E</span><span class="title-char">X</span><span class="title-decoration"></span>
+                    </h1>
+                </div>
+            </div>
         </div>
-        <div class="projects-content">
-            <div class="projects-container" id="prjc">
-                <div class="project-card card-reverse">
-                    <div class="project-thumbnail">
-                        <img src="https://i.imgur.com/HA1La3O.png" alt="">
-                    </div>
-                    <div class="project-card-container">
-                        <div class="page-title">
-                            <h3>Reciple</h3>
-                        </div>
-                        <div class="project-card-content">
-                            <p class="project-description">
-                                It's a modular Discord.js bot similar to Axis, but it's not deprecated and written in typescript. To run reciple, unlike Axis, you don't need to download the entire repo; simply install it and type the command.
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/FalloutStudios/Reciple" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://www.npmjs.com/package/reciple" target="_blank" title="npm"><i class="fab fa-npm"></i></a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="about" id="about">
+            <div class="about-card">
+                <div class="card-content">
+                    <h1 class="card-title">About</h1>
+                    <p class="card-text addemoji aboutme" data-key="description">Loading...</p>
+                    <div class="card-links aboutme" data-key="links"></div>
                 </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="https://i.imgur.com/0o81Mvs.png" alt="">
-                    </div>
-                    <div class="project-card-container">
-                        <div class="page-title">
-                            <h3>Axis (Deprecated)</h3>
-                        </div>
-                        <div class="project-card-content">
-                            <p class="project-description">
-                                Axis is a Discord bot that loads modules that contains commands and other functions to easily build your bot by adding those scrips made for your supported Axis version.
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/FalloutStudios/Axis/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card card-reverse">
-                    <div class="project-thumbnail">
-                        <img src="/static/hiddenplayer-cover.png" alt="">
-                    </div>
-                    <div class="project-card-container">
-                        <div class="page-title">
-                            <h3>HiddenPlayer (Inactive)</h3>
-                        </div>
-                        <div class="project-card-content">
-                            <p class="project-description">
-                                HiddenPlayer is an afk bot that makes a non 24/7 server online for a long time. This was originally used for a server but shortly removed as it's a breach to the hosting TOS. 
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/FalloutStudios/HiddenPlayer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="/static/fallout-utility-cover.png" alt="">
-                    </div>
-                    <div class="project-card-container">
-                        <div class="page-title">
-                            <h3>Fallout Utility</h3>
-                        </div>
-                        <div class="project-card-content">
-                            <p class="project-description">
-                                A utility module used for Fallout projects. This includes the main logger of Axis bot and some other utilities. This is still in development and is not meant to be used for anything else. 
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/FalloutStudios/fallout-utility" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="https://www.npmjs.com/package/fallout-utility" target="_blank" title="npm"><i class="fab fa-npm"></i></a>
-                            </div>
-                        </div>
+                <div class="card-decoration">
+                    <div class="card-image">
+                        <img src="https://avatars.githubusercontent.com/u/69035887?v=4" alt="GitHub Profile Picture">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer page">
-        <p>Made by<br><a href="https://github.com/GhexterCortes" target="_blank" title="GitHub">Ghexter Cortes</a></p>
+        <div class="projects" id="projects">
+            <div class="project-cards"></div>
+        </div>
+        <div class="nav" style="background-color: rgb(218, 218, 218);">
+            <div class="nav-links">
+                <a href="https://github.com/GhexterCortes/" target="_blank">GhexterCortes</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

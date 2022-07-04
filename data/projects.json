@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Reciple",
+        "description": "It's a modular Discord.js bot handler similar to [Axis](https://github.com/FalloutStudios/Axis), written in typescript. To run reciple, unlike Axis, you don't need to download the entire repo; simply install it and type the command:\n\n```npm i reciple --save-dev```",
+        "icon": "https://i.imgur.com/AetEccD.png",
+        "theme": "#3232a8",
+        "deprecated": false,
+        "links": {
+            "github": "https://github.com/FalloutStudios/Reciple",
+            "npm": "https://www.npmjs.com/package/reciple",
+            "docs": "https://reciple.js.org"
+        }
+    },
+    {
+        "title": "E Player",
+        "description": "E player is a simple music bot made with [FalloutStudios/Reciple](https://github.com/FalloutStudios/Reciple) and [Androz2091/discord-player](https://github.com/Androz2091/discord-player). E Player is made for multi guild and single guild with all common music commands and you can extend the bot with other Reciple modules to add more functionality.",
+        "icon": "https://i.imgur.com/ZtubpAM.png",
+        "theme": "#b81f1a",
+        "deprecated": false,
+        "links": {
+            "github": "https://github.com/FalloutStudios/e-player"
+        }
+    },
+    {
+        "title": "Axis",
+        "description": "Axis is a Discord bot that loads modules that contains commands and other functions to easily build your bot by adding those scrips made for your supported Axis version.",
+        "icon": "https://i.imgur.com/0o81Mvs.png",
+        "theme": "#4913d1",
+        "deprecated": true,
+        "links": {
+            "github": "https://github.com/FalloutStudios/Axis/"
+        }
+    },
+    {
+        "title": "HiddenPlayer",
+        "description": "HiddenPlayer is an afk bot that makes a non 24/7 server online for a long time. This was originally used for a server but shortly removed as it's a breach to the hosting TOS.",
+        "icon": "https://i.imgur.com/G10XXcC.png",
+        "theme": "#c2512f",
+        "deprecated": true,
+        "links": {
+            "github": "https://github.com/FalloutStudios/HiddenPlayer"
+        }
+    },
+    {
+        "title": "Fallout Utility",
+        "description": "A utility module used for Fallout projects. This includes the main logger of Axis bot and some other utilities. This is still in development and is not meant to be used for anything else.",
+        "icon": "https://i.imgur.com/H09lAfa.png",
+        "theme": "#e02d2d",
+        "deprecated": false,
+        "links": {
+            "github": "https://github.com/FalloutStudios/fallout-utility",
+            "npm": "https://www.npmjs.com/package/fallout-utility"
+        }
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "name": "cat",
+        "url": "https://emoji.gg/assets/emoji/1742-meowe.png"
+    },
+    {
+        "name": "clown",
+        "url": "https://cdn3.emoji.gg/emojis/1342-clown.png"
+    },
+    {
+        "name": "nerd",
+        "url": "https://cdn3.emoji.gg/emojis/5368-nerd.png"
+    },
+    {
+        "name": "wawa-cat",
+        "url": "https://cdn3.emoji.gg/emojis/9298-wawa-cat-fast.png"
+    },
+    {
+        "name": "html",
+        "url": "https://cdn3.emoji.gg/emojis/HTML.png"
+    },
+    {
+        "name": "css",
+        "url": "https://cdn3.emoji.gg/emojis/8517-css.png"
+    },
+    {
+        "name": "node",
+        "url": "https://cdn3.emoji.gg/emojis/9945_nodeparrot.gif"
+    },
+    {
+        "name": "js",
+        "url": "https://cdn3.emoji.gg/emojis/node_js.png"
+    },
+    {
+        "name": "php",
+        "url": "https://cdn3.emoji.gg/emojis/php.png"
+    },
+    {
+        "name": "python",
+        "url": "https://cdn3.emoji.gg/emojis/6850_python_thonk.png"
+    },
+    {
+        "name": "java",
+        "url": "https://cdn3.emoji.gg/emojis/java.png"
+    },
+    {
+        "name": "rust",
+        "url": "https://cdn3.emoji.gg/emojis/1392-crabrave.gif"
+    },
+    {
+        "name": "deprecated",
+        "url": "https://i.imgur.com/FpYxlcZ.png"
+    }
+]
