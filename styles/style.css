@@ -49,17 +49,57 @@ html {
   height: 100%;
   width: 100%;
   overflow: auto;
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+.document.unloaded {
+  display: none;
+}
+
+.format-text {
+  white-space: break-spaces;
+  word-wrap: break-word;
 }
 
 img.emoji {
-  width: 1.2em;
   height: 1.2em;
   vertical-align: -0.15em;
   margin: 0 0.2em;
+}
+img.emoji[title=deprecated] {
+  border-radius: 5px;
+  height: 1.1rem;
+  margin-bottom: 5px;
+}
+
+code {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #333;
+  background: rgb(59, 59, 59);
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme-dark);
+}
+
+.loader {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader svg {
+  height: 5rem;
+  color: var(--theme);
 }
 
 .nav {
@@ -281,15 +321,20 @@ img.emoji {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 .projects .project-cards::-webkit-scrollbar {
   display: none;
 }
 .projects .project-cards .project-card {
-  width: 100%;
+  width: calc(100% - 40px);
+  max-width: 800px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: center;
 }
 .projects .project-cards .project-card .card {
   margin: 2rem;
@@ -312,8 +357,7 @@ img.emoji {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: rgb(194, 59, 59);
-  opacity: 0.5;
+  background: transparent;
 }
 .projects .project-cards .project-card .card .card-decoration .card-icon {
   position: absolute;
@@ -325,6 +369,15 @@ img.emoji {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
+}
+.projects .project-cards .project-card .card .card-decoration .card-icon > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
 }
 .projects .project-cards .project-card .card .card-content {
   padding: 1.4rem;
@@ -355,8 +408,72 @@ img.emoji {
   font-size: 1.3rem;
   text-align: center;
   vertical-align: middle;
-  background: var(--theme-dark);
-  color: var(--white);
+  background: currentColor;
   margin-right: 1rem;
   border-radius: 10px;
+}
+.projects .project-cards .project-card .card .card-content .card-links > a > i {
+  color: var(--white);
+}
+
+@media (max-width: 670px) {
+  .about .about-card {
+    flex-direction: column-reverse;
+    max-width: 400px;
+  }
+  .about .about-card .card-content {
+    margin-top: 2rem;
+    padding-right: 0;
+  }
+  .about .about-card .card-content h1.card-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .about .about-card .card-content p.card-text {
+    font-size: 1.1rem;
+  }
+  .about .about-card .card-content .card-links {
+    justify-content: center;
+  }
+}
+@media (max-width: 670px) and (max-width: 485px) {
+  .projects .project-cards .project-card .card {
+    flex-direction: column;
+    overflow: unset;
+    margin-top: 3rem;
+  }
+  .projects .project-cards .project-card .card .card-decoration {
+    width: 100%;
+    height: 10px;
+  }
+  .projects .project-cards .project-card .card .card-decoration .card-background {
+    border-radius: 10px 10px 0 0;
+  }
+  .projects .project-cards .project-card .card .card-decoration .card-icon {
+    top: -30px;
+    left: 30px;
+  }
+  .projects .project-cards .project-card .card .card-content {
+    padding: 1rem 30px;
+    padding-top: calc(1rem + 50px);
+  }
+}
+@media (max-width: 670px) and (max-width: 485px) and (max-width: 420px) {
+  .nav .nav-links {
+    justify-content: space-around;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 670px) and (max-width: 485px) and (max-width: 420px) and (max-width: 385px) {
+  .nav .nav-links a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .projects .project-cards .project-card .card {
+    max-width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

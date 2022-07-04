@@ -32,6 +32,42 @@
     line-height: 0.8;
   }
 }
+@media (max-width: 470px) {
+  @-webkit-keyframes title-in {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      font-size: 8em;
+      letter-spacing: 0.2em;
+      line-height: 0.9;
+    }
+    100% {
+      opacity: 1;
+      font-size: 5em;
+      letter-spacing: 0.1em;
+      line-height: 0.8;
+    }
+  }
+  @keyframes title-in {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      font-size: 8em;
+      letter-spacing: 0.2em;
+      line-height: 0.9;
+    }
+    100% {
+      opacity: 1;
+      font-size: 5em;
+      letter-spacing: 0.1em;
+      line-height: 0.8;
+    }
+  }
+}
 .document.ready .home .home-contents .title-container h1 {
   opacity: 0;
   animation: title-in 0.3s ease-in-out both;

@@ -46,5 +46,9 @@
     {
         "name": "rust",
         "url": "https://cdn3.emoji.gg/emojis/1392-crabrave.gif"
+    },
+    {
+        "name": "deprecated",
+        "url": "https://i.imgur.com/FpYxlcZ.png"
     }
 ]
