@@ -1,1 +1,2 @@
-theme: jekyll-theme-cayman
+sass:
+    sass_dir: styles
