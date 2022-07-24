@@ -57,6 +57,7 @@
         "title": "Fallout Utility",
         "description": "A utility module used for Fallout projects. This includes the main logger of Axis bot and some other utilities. This is still in development and is not meant to be used for anything else.",
         "icon": "https://i.imgur.com/H09lAfa.png",
+        "appIcon": "https://i.imgur.com/KmVeuNu.png",
         "theme": "#e02d2d",
         "deprecated": false,
         "links": {
