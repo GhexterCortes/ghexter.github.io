@@ -1,7 +1,7 @@
 [
     {
         "title": "Reciple",
-        "description": "It's a modular Discord.js bot handler similar to [Axis](https://github.com/FalloutStudios/Axis), written in typescript. To run reciple, unlike Axis, you don't need to download the entire repo; simply install it and type the command:\n\n```npm i reciple --save-dev```",
+        "description": "Reciple is a simple [Discord.js](https://discord.js.org) handler that just works! To install run the following command in your terminal:\n```\nnpm i reciple\n```",
         "icon": "https://i.imgur.com/AetEccD.png",
         "theme": "#3232a8",
         "deprecated": false,
@@ -13,12 +13,24 @@
     },
     {
         "title": "E Player",
-        "description": "E player is a simple music bot made with [FalloutStudios/Reciple](https://github.com/FalloutStudios/Reciple) and [Androz2091/discord-player](https://github.com/Androz2091/discord-player). E Player is made for multi guild and single guild with all common music commands and you can extend the bot with other Reciple modules to add more functionality.",
+        "description": "E player is a simple music bot made with [FalloutStudios/Reciple](https://github.com/FalloutStudios/Reciple) and [Androz2091/discord-player](https://github.com/Androz2091/discord-player). E Player is made for multi guild and single guild with all common music commands.",
         "icon": "https://i.imgur.com/ZtubpAM.png",
         "theme": "#b81f1a",
         "deprecated": false,
         "links": {
             "github": "https://github.com/FalloutStudios/e-player"
+        }
+    },
+    {
+        "title": "Discord.js pagination",
+        "description": "An interaction based pagination library for Discord.js written in TypeScript",
+        "icon": "https://i.imgur.com/NiMNxhM.png",
+        "theme": "#5c61f4",
+        "deprecated": false,
+        "links": {
+            "github": "https://github.com/GhexterCortes/djs-pagination",
+            "npm": "https://www.npmjs.com/package/@ghextercortes/djs-pagination"
+
         }
     },
     {
