@@ -18,7 +18,8 @@
         "theme": "#b81f1a",
         "deprecated": false,
         "links": {
-            "github": "https://github.com/FalloutStudios/e-player"
+            "github": "https://github.com/FalloutStudios/e-player",
+            "invite": "https://discord.com/api/oauth2/authorize?client_id=986850355897851914&permissions=274944321856&scope=bot%20applications.commands"
         }
     },
     {
