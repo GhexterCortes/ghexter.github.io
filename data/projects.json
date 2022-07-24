@@ -1,7 +1,7 @@
 [
     {
         "title": "Reciple",
-        "description": "Reciple is a simple [Discord.js](https://discord.js.org) handler that just works! To install run the following command in your terminal:\n```\nnpm i reciple\n```",
+        "description": "Reciple is a simple [Discord.js](https://discord.js.org) handler that just works! To install run the following command in your terminal:\n```npm i reciple```",
         "icon": "https://i.imgur.com/AetEccD.png",
         "theme": "#3232a8",
         "deprecated": false,
