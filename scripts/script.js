@@ -11,9 +11,9 @@ const markdownConverter = new showdown.Converter();
 let aboutme, emojis, projects;
 
 (async () => {
-    aboutme = await getURL('/data/aboutme.json');
-    emojis = await getURL('/data/emojis.json');
-    projects = await getURL('/data/projects.json');
+    aboutme = await getURL('https://raw.githubusercontent.com/GhexterCortes/ghextercortes.github.io/main/data/aboutme.json');
+    emojis = await getURL('https://raw.githubusercontent.com/GhexterCortes/ghextercortes.github.io/main/data/emojis.json');
+    projects = await getURL('https://raw.githubusercontent.com/GhexterCortes/ghextercortes.github.io/main/data/projects.json');
 
     const emojiElements = document.querySelectorAll('.addemoji');
     emojiElements.forEach((e) => {
