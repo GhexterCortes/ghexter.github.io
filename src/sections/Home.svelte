@@ -2,6 +2,7 @@
     import Icon from '@iconify/svelte';
     import { github } from '../scripts/info';
     import Topbar from '../components/Topbar.svelte';
+    import ScrollAnchor from '../components/ScrollAnchor.svelte';
 </script>
 
 <style lang="scss">
@@ -61,7 +62,7 @@
                     display: flex;
                     margin-top: 2rem;
 
-                    a {
+                    :global(a) {
                         padding: 0.5rem 1rem;
                         color: e.$theme;
                         border: 2px solid e.$primary;
@@ -92,6 +93,27 @@
                     }
                 }
             }
+
+            > :global(a) {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                color: e.$light;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                transition: 0.3s;
+                margin-bottom: 1rem;
+                height: 50px;
+                width: 50px;
+
+                &:hover,
+                &:focus {
+                    margin-bottom: 0.5rem;
+                }
+            }
         }
     }
 </style>
@@ -108,9 +130,12 @@
             </h1>
             <p class="intro">I do simple high level software thingz like any other developer.</p>
             <div class="buttons">
-                <a href="#about">About</a>
+                <ScrollAnchor link="#about">About</ScrollAnchor>
                 <a href="{github}">View GitHub <Icon icon="bi:arrow-right-short" inline={true} /></a>
             </div>
         </div>
+        <ScrollAnchor link="#about">
+            <Icon icon="bi:arrow-down-short" inline={true}/>
+        </ScrollAnchor>
     </div>
 </div>
