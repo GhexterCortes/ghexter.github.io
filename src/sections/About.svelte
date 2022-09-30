@@ -17,7 +17,6 @@
         .container {
             display: flex;
             align-items: center;
-            padding: 0 2rem;
             width: 100%;
             max-width: 900px;
 
@@ -117,6 +116,58 @@
                         color: rgba($color: e.$theme, $alpha: 0.9);
                         text-align: justify;
                         height: 100%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 730px) {
+            .container {
+                justify-content: center;
+
+                .contents {
+                    flex-direction: column;
+                    max-width: 400px;
+
+                    .profile {
+                        .image {
+                            width: 100%;
+                            margin-top: 1rem;
+
+                            .avatar {
+                                height: 150px;
+                                width: 150px;
+                            }
+                        }
+                    }
+
+                    .description {
+                        padding-bottom: 2rem;
+
+                        .title {
+                            margin-top: 0;
+                            margin-bottom: 1rem;
+                            font-size: 2rem;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+        .about {
+            padding: 0 1.5rem;
+
+            .container {
+                .contents {
+                    .description {
+                        padding: 1.2rem;
+
+                        .details {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
