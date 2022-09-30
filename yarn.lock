@@ -167,10 +167,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:*":
+  version: 15.7.5
+  resolution: "@types/prop-types@npm:15.7.5"
+  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
+  languageName: node
+  linkType: hard
+
 "@types/pug@npm:^2.0.4":
   version: 2.0.6
   resolution: "@types/pug@npm:2.0.6"
   checksum: e8d09c3ddc7e6b87050a16d73694518f259a8ed74a0ab79b81b847baf89d92d44959ed68199966ac6f4a218c715c9bb3e4c86c8800d4868a4a674f4b21d2f01d
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:>=16.0.0":
+  version: 18.0.21
+  resolution: "@types/react@npm:18.0.21"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 36c1a7c9d507e81e2e629c1ad3db51d7b84d8b010c2d5008da411874286c6a5ccc711ae1d4c470efc0bdc77153cc8804a40e927e929e5164c669ca41b84b846d
   languageName: node
   linkType: hard
 
@@ -180,6 +198,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 19eb71acc4b0d7db2170732a51ad18a34007021f42069652a5be8a3e3a448a470d2f970b9e85f734d1896bf3a25e48fb5132b4a989c101eb5df21cc171d426c5
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.16.2
+  resolution: "@types/scheduler@npm:0.16.2"
+  checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
   languageName: node
   linkType: hard
 
@@ -392,6 +417,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.0.2":
+  version: 3.1.1
+  resolution: "csstype@npm:3.1.1"
+  checksum: 1f7b4f5fdd955b7444b18ebdddf3f5c699159f13e9cf8ac9027ae4a60ae226aef9bbb14a6e12ca7dba3358b007cee6354b116e720262867c398de6c955ea451d
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -429,6 +461,16 @@ __metadata:
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
+  languageName: node
+  linkType: hard
+
+"discord-markdown-fix@npm:^2.5.4":
+  version: 2.5.4
+  resolution: "discord-markdown-fix@npm:2.5.4"
+  dependencies:
+    highlight.js: ^11.6.0
+    simple-markdown: ^0.7.3
+  checksum: ba5dae8a16322c06eefdef18e7562f59a332703bdf1f0ec1832455d9b5f10d07db627a89d7b7c2e3613a23684a0b39428ef41b1c30b3bd8a6947ba5abe66c375
   languageName: node
   linkType: hard
 
@@ -838,6 +880,13 @@ __metadata:
   dependencies:
     function-bind: ^1.1.1
   checksum: b9ad53d53be4af90ce5d1c38331e712522417d017d5ef1ebd0507e07c2fbad8686fffb8e12ddecd4c39ca9b9b47431afbb975b8abf7f3c3b82c98e9aad052792
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^11.6.0":
+  version: 11.6.0
+  resolution: "highlight.js@npm:11.6.0"
+  checksum: 3908eb34a4b442ca1e20c1ae6415ea935fbbcdb2b532a89948d82b0fa4ad41fc5de3802a0de4e88a0bcb7d97d4445579048cd2aab1d105ac47f59dd58a9a98ae
   languageName: node
   linkType: hard
 
@@ -1297,6 +1346,7 @@ __metadata:
     "@iconify/svelte": ^3.0.0
     "@sveltejs/vite-plugin-svelte": ^1.0.2
     "@tsconfig/svelte": ^3.0.0
+    discord-markdown-fix: ^2.5.4
     sass: ^1.55.0
     svelte: ^3.49.0
     svelte-check: ^2.8.1
@@ -1592,6 +1642,15 @@ __metadata:
   version: 3.0.7
   resolution: "signal-exit@npm:3.0.7"
   checksum: a2f098f247adc367dffc27845853e9959b9e88b01cb301658cfe4194352d8d2bb32e18467c786a7fe15f1d44b233ea35633d076d5e737870b7139949d1ab6318
+  languageName: node
+  linkType: hard
+
+"simple-markdown@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "simple-markdown@npm:0.7.3"
+  dependencies:
+    "@types/react": ">=16.0.0"
+  checksum: 165941899fddfaa7c398410f8ce6941109bc86fbc9abb17f8b6be7a9ac8ae36c0af643a3e0adcba60053a9f1eaecdd4016d46d79eef39b8ae04982d2bd52bbc9
   languageName: node
   linkType: hard
 

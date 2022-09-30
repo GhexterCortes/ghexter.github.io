@@ -22,6 +22,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "dependencies": {
+    "discord-markdown-fix": "^2.5.4",
     "svelte-gradient-typography": "^0.0.3"
   }
 }
