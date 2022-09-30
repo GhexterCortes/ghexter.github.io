@@ -32,7 +32,9 @@ import { toHTML } from 'discord-markdown-fix';
             align-items: center;
 
             img {
-                height: 100%;
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
             }
         }
 
@@ -53,11 +55,15 @@ import { toHTML } from 'discord-markdown-fix';
                 font-size: 1rem;
                 color: rgba($color: e.$theme, $alpha: 0.9);
                 text-align: justify;
+                min-height: 80px;
             }
 
             .links {
                 flex-shrink: 0;
-                margin-top: 1rem;
+                margin-top: 1.5rem;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1rem;
 
                 > :global(a) {
                     display: flex;

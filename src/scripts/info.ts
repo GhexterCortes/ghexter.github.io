@@ -25,35 +25,66 @@ export const socialLinks = [
 ];
 export const projects = [
     {
-        thumbnail: 'https://res.cloudinary.com/practicaldev/image/fetch/s--gwzD3Kc_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ia16n6a8v4cx2hqwnva.png',
-        name: 'Sus Project',
-        description: 'Some **bold** and *Italic* text with a little bit of __underlined__ and ~~striked~~ text.',
+        name: 'Reciple',
+        description: 'Reciple is a simple Discord.js handler that just works! To install run the `npm i reciple discord.js`',
+        thumbnail: 'https://i.imgur.com/AetEccD.png',
         links: [
             {
-                icon: 'akar-icons:discord-fill',
-                url: 'eee'
+                icon: 'akar-icons:github-fill',
+                url: 'https://github.com/FalloutStudios/Reciple'
+            },
+            {
+                icon: 'akar-icons:npm-fill',
+                url: 'https://www.npmjs.com/package/reciple'
+            },
+            {
+                icon: 'icon-park-solid:doc-success',
+                url: 'https://reciple.js.org/'
             }
         ]
     },
     {
-        thumbnail: 'https://res.cloudinary.com/practicaldev/image/fetch/s--gwzD3Kc_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ia16n6a8v4cx2hqwnva.png',
-        name: 'Sus Project',
-        description: 'Some **bold** and *Italic* text with a little bit of __underlined__ and ~~striked~~ text.',
+        name: 'Discord.js pagination',
+        description: 'An reaction and interaction pagination package for Discord.js written in TypeScript.',
+        thumbnail: 'https://i.imgur.com/NiMNxhM.png',
         links: [
             {
-                icon: 'akar-icons:discord-fill',
-                url: 'eee'
+                icon: 'akar-icons:github-fill',
+                url: 'https://github.com/GhexterCortes/djs-pagination'
+            },
+            {
+                icon: 'akar-icons:npm-fill',
+                url: 'https://www.npmjs.com/package/@ghextercortes/djs-pagination'
             }
         ]
     },
     {
-        thumbnail: 'https://res.cloudinary.com/practicaldev/image/fetch/s--gwzD3Kc_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ia16n6a8v4cx2hqwnva.png',
-        name: 'Sus Project',
-        description: 'Some **bold** and *Italic* text with a little bit of __underlined__ and ~~striked~~ text.',
+        name: 'Eris Collectors',
+        description: 'A simple package that collects eris message, interaction, or reactions.',
+        thumbnail: 'https://i.imgur.com/zrLR1d4.png',
         links: [
             {
-                icon: 'akar-icons:discord-fill',
-                url: 'eee'
+                icon: 'akar-icons:github-fill',
+                url: 'https://github.com/NotGhex/eris-collectors'
+            },
+            {
+                icon: 'akar-icons:npm-fill',
+                url: 'https://www.npmjs.com/package/eris-collectors'
+            }
+        ]
+    },
+    {
+        name: 'Fallout Utility',
+        description: 'A utility module used for Fallout projects. This includes the utility function and classes for FalloutStudios projects.',
+        thumbnail: 'https://i.imgur.com/H09lAfa.png',
+        links: [
+            {
+                icon: 'akar-icons:github-fill',
+                url: 'https://github.com/FalloutStudios/fallout-utility'
+            },
+            {
+                icon: 'akar-icons:npm-fill',
+                url: 'https://www.npmjs.com/package/fallout-utility'
             }
         ]
     },
