@@ -114,6 +114,21 @@
                 }
             }
         }
+
+        @media (max-width: 365px) {
+            .container {
+                .contents {
+                    .buttons {
+                        flex-direction: column;
+
+                        > :global(a) {
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 </style>
 
