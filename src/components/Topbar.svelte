@@ -1,7 +1,7 @@
 <script>
     import '../assets/css/topbar.scss';
     import Icon from "@iconify/svelte";
-    import { github } from "../scripts/info";
+    import { discordInvite, github } from "../scripts/info";
     import ScrollAnchor from './ScrollAnchor.svelte';
 
     let y = 0;
@@ -34,7 +34,7 @@
         <div class="links">
             <ScrollAnchor link="#about" on:linkClick={linkClicked}>About</ScrollAnchor>
             <ScrollAnchor link="#projects" on:linkClick={linkClicked}>Projects</ScrollAnchor>
-            <ScrollAnchor link="#contact" on:linkClick={linkClicked}>Contact</ScrollAnchor>
+            <ScrollAnchor link="{discordInvite}" on:linkClick={linkClicked}>Discord <Icon icon="ci:external-link" inline={true} /></ScrollAnchor>
             <ScrollAnchor link="{github}" on:linkClick={linkClicked}>GitHub <Icon icon="ci:external-link" inline={true} /></ScrollAnchor>
         </div>
     </div>

@@ -1,1 +1,0 @@
-<div class="contact" id="contact"></div>
