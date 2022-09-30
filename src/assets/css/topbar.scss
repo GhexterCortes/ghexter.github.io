@@ -1,0 +1,146 @@
+@use './e.scss';
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 5;
+    color: e.$light;
+    justify-content: center;
+    transition: 0.3s;
+
+    .container {
+        width: 100%;
+        display: flex;
+        max-width: 900px;
+        align-items: center;
+
+        .title {
+            padding: 1rem;
+            flex-shrink: 0;
+            align-items: center;
+
+            a {
+                display: block;
+                text-decoration: none;
+                font-weight: 700;
+                color: e.$primary;
+                text-transform: uppercase;
+                padding-left: 1rem;
+            }
+
+            .burger {
+                display: none;
+            }
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+
+            a {
+                font-size: 0.95rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin-right: 1rem;
+                font-weight: 500;
+                display: flex;
+                color: currentColor;
+                align-items: center;
+
+                svg {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+    &.scrolling {
+        color: e.$light;
+        backdrop-filter: blur(20px) saturate(200%);
+        background: rgba($color: e.$theme, $alpha: 0.9);
+        box-shadow: 0px 0px 50px -10px rgba($color: #000, $alpha: 0.5);
+    }
+}
+
+@media (max-width: 490px) {
+    .topbar {
+        .container {
+            .title {
+                display: flex;
+                width: 100%;
+                flex-shrink: 0;
+                justify-content: space-between;
+
+                .burger {
+                    display: block;
+                    height: 100%;
+                    position: relative;
+
+                    button {
+                        border: none;
+                        background: none;
+                        color: currentColor;
+                        font-size: 1.4rem;
+                        margin-right: 3rem;
+                        height: 100%;
+
+                        svg {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 2rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .links {
+                display: none;
+            }
+        }
+
+        &.active {
+            background: e.$light;
+            color: e.$theme;
+            height: 100%;
+
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .title a {
+                    color: e.$theme;
+                }
+
+                .links {
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    height: 100%;
+                    padding: 1rem;
+                    padding-top: 50px;
+
+                    a {
+                        padding: 1rem;
+                        width: 100%;
+                        display: block;
+                        text-align: right;
+                        font-size: 1.2em;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

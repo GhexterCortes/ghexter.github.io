@@ -1,0 +1,36 @@
+<script lang="ts">
+    import { createEventDispatcher } from 'svelte';
+
+
+    export let link = '#';
+
+    const dispatch = createEventDispatcher();
+
+    function scrollToTarget(e: MouseEvent) {
+        if (!link.startsWith('#') && !link.startsWith('http')) return;
+
+        e.preventDefault();
+        dispatch('linkClick', e);
+
+        if (link.startsWith('http')) {
+            window.open(link, '_bank');
+            return;
+        };
+
+        if (link == '#') {
+            window.scrollTo({ behavior: 'smooth', left: 0, top: 0 });
+            return;
+        }
+
+        const targetElement = document.querySelector(link);
+        if (!targetElement) return;
+
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+    }
+</script>
+
+<a href={link} on:click={scrollToTarget}>
+    <slot>
+        Go to {link}
+    </slot>
+</a>
