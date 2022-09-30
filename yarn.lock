@@ -1300,6 +1300,7 @@ __metadata:
     sass: ^1.55.0
     svelte: ^3.49.0
     svelte-check: ^2.8.1
+    svelte-gradient-typography: ^0.0.3
     svelte-preprocess: ^4.10.7
     tslib: ^2.4.0
     typescript: ^4.6.4
@@ -1721,6 +1722,13 @@ __metadata:
   bin:
     svelte-check: bin/svelte-check
   checksum: b7ee58216abd9f4884ee0b8b2f34a35ae625279e1642c8987a934843a50ab0959f6fd5d87a8829dbc0ea742778ac3fb1b1fbfef9bfc47ee05635ed0b4d4f5e74
+  languageName: node
+  linkType: hard
+
+"svelte-gradient-typography@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "svelte-gradient-typography@npm:0.0.3"
+  checksum: b423911a2518208b8f1cfb58acce7dbefd12753595b2ac66befb80f0f101c9413faffef09f279bee445b7ef617244b7f52360685672520d5134f1ec7331e0ac9
   languageName: node
   linkType: hard
 

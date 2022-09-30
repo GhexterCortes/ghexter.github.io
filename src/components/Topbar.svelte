@@ -8,6 +8,10 @@
     let scrolling = false;
     let navOpen = false;
 
+    function linkClicked() {
+        navOpen = false;
+    }
+
     $: y > 0 ? scrolling = true : scrolling = false
 </script>
 
@@ -28,10 +32,10 @@
             </div>
         </div>
         <div class="links">
-            <ScrollAnchor link="#about">About</ScrollAnchor>
-            <ScrollAnchor link="#projects">Projects</ScrollAnchor>
-            <ScrollAnchor link="#contact">Contact</ScrollAnchor>
-            <ScrollAnchor link="{github}">GitHub <Icon icon="ci:external-link" inline={true} /></ScrollAnchor>
+            <ScrollAnchor link="#about" on:linkClick={linkClicked}>About</ScrollAnchor>
+            <ScrollAnchor link="#projects" on:linkClick={linkClicked}>Projects</ScrollAnchor>
+            <ScrollAnchor link="#contact" on:linkClick={linkClicked}>Contact</ScrollAnchor>
+            <ScrollAnchor link="{github}" on:linkClick={linkClicked}>GitHub <Icon icon="ci:external-link" inline={true} /></ScrollAnchor>
         </div>
     </div>
 </div>

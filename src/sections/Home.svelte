@@ -2,6 +2,7 @@
     import Icon from '@iconify/svelte';
     import { github } from '../scripts/info';
     import ScrollAnchor from '../components/ScrollAnchor.svelte';
+    import GradientText from 'svelte-gradient-typography';
 </script>
 
 <style lang="scss">
@@ -39,13 +40,17 @@
                     font-size: 5rem;
                     font-weight: 700;
                     line-height: 5rem;
+                    font-family: 'Abyssinica SIL';
 
-                    .highlight {
-                        transition: 0.3s;
-
-                        &:hover {
-                            color: e.$primary;
-                        }
+                    :global(p) {
+                        display: inline;
+                        font-family: inherit;
+                        font-size: inherit;
+                        font-weight: inherit;
+                        line-height: inherit;
+                        letter-spacing: inherit;
+                        padding: 0;
+                        margin: 0;
                     }
                 }
 
@@ -139,7 +144,7 @@
                 Hi, There
             </span>
             <h1 class="title">
-                I am <span class="highlight">Ghex</span>
+                I am <GradientText size="1em" gradient="linear-gradient(317deg, #ffa745 15%, #fe869f 50%, #ef7ac8 75%, #a083ed 90%, #43aeff 110%)">Ghex</GradientText>
             </h1>
             <p class="intro">I do simple high level software thingz like any other developer.</p>
             <div class="buttons">

@@ -1,10 +1,16 @@
 <script lang="ts">
+    import { createEventDispatcher } from 'svelte';
+
+
     export let link = '#';
+
+    const dispatch = createEventDispatcher();
 
     function scrollToTarget(e: MouseEvent) {
         if (!link.startsWith('#') && !link.startsWith('http')) return;
 
         e.preventDefault();
+        dispatch('linkClick', e);
 
         if (link.startsWith('http')) {
             window.open(link, '_bank');
