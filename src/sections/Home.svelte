@@ -22,6 +22,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 60px;
+            padding-bottom: 1rem;
 
             .contents {
                 width: 100%;
@@ -122,6 +124,8 @@
 
         @media (max-width: 365px) {
             .container {
+                padding-top: 100px;
+
                 .contents {
                     .buttons {
                         flex-direction: column;
@@ -131,6 +135,10 @@
                             margin-bottom: 10px;
                         }
                     }
+                }
+
+                > :global(a) {
+                    display: none;
                 }
             }
         }
