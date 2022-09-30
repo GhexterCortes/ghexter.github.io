@@ -1,7 +1,6 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
     import { github } from '../scripts/info';
-    import Topbar from '../components/Topbar.svelte';
     import ScrollAnchor from '../components/ScrollAnchor.svelte';
 </script>
 
@@ -119,7 +118,6 @@
 </style>
 
 <div class="home">
-    <Topbar/>
     <div class="container">
         <div class="contents">
             <span class="greetings">
@@ -131,7 +129,7 @@
             <p class="intro">I do simple high level software thingz like any other developer.</p>
             <div class="buttons">
                 <ScrollAnchor link="#about">About</ScrollAnchor>
-                <a href="{github}">View GitHub <Icon icon="bi:arrow-right-short" inline={true} /></a>
+                <ScrollAnchor link="{github}">View GitHub <Icon icon="bi:arrow-right-short" inline={true} /></ScrollAnchor>
             </div>
         </div>
         <ScrollAnchor link="#about">

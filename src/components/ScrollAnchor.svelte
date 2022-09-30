@@ -2,9 +2,14 @@
     export let link = '#';
 
     function scrollToTarget(e: MouseEvent) {
-        if (!link.startsWith('#')) return;
+        if (!link.startsWith('#') && !link.startsWith('http')) return;
 
         e.preventDefault();
+
+        if (link.startsWith('http')) {
+            window.open(link, '_bank');
+            return;
+        };
 
         if (link == '#') {
             window.scrollTo({ behavior: 'smooth', left: 0, top: 0 });

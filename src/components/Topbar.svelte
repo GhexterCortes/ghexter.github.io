@@ -4,10 +4,16 @@
     import { github } from "../scripts/info";
     import ScrollAnchor from './ScrollAnchor.svelte';
 
+    let y = 0;
+    let scrolling = false;
     let navOpen = false;
+
+    $: y > 0 ? scrolling = true : scrolling = false
 </script>
 
-<div class="topbar" class:active={navOpen}>
+<svelte:window bind:scrollY={y} />
+
+<div class="topbar" class:active={navOpen} class:scrolling={scrolling}>
     <div class="container">
         <div class="title">
             <ScrollAnchor link="#">Not Ghex</ScrollAnchor>
@@ -25,7 +31,7 @@
             <ScrollAnchor link="#about">About</ScrollAnchor>
             <ScrollAnchor link="#projects">Projects</ScrollAnchor>
             <ScrollAnchor link="#contact">Contact</ScrollAnchor>
-            <a href="{github}">GitHub <Icon icon="ci:external-link" inline={true} /></a>
+            <ScrollAnchor link="{github}">GitHub <Icon icon="ci:external-link" inline={true} /></ScrollAnchor>
         </div>
     </div>
 </div>

@@ -58,6 +58,13 @@
             }
         }
     }
+
+    &.scrolling {
+        color: e.$light;
+        backdrop-filter: blur(10px) saturate(120%);
+        background: rgba($color: e.$theme, $alpha: 0.8);
+        box-shadow: 0px 0px 50px -10px rgba($color: #000, $alpha: 0.5);
+    }
 }
 
 @media (max-width: 490px) {
