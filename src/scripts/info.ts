@@ -1,5 +1,5 @@
 export const github = 'https://github.com/NotGhex';
-export const discordInvite = '';
+export const discordInvite = 'https://discord.com/channels/@me/749120018771345488';
 export const avatar = 'https://avatars.githubusercontent.com/u/69035887?v=4';
 export const description = `Hello, I am *Ghex*. I'm a student developer from Manila and I like to do nothing. I'm interested in HTML, CSS, JavaScript, PHP, Python, Java programming. I started my interest in coding when I was 11 years old and wrote my very first projects on 2019.<br><br><br>My goal is to make everything I think of.<br><br>*- Ghex*`;
 export const socialLinks = [
@@ -51,11 +51,11 @@ export const projects = [
         links: [
             {
                 icon: 'akar-icons:github-fill',
-                url: 'https://github.com/GhexterCortes/djs-pagination'
+                url: 'https://github.com/FalloutStudios/djs-pagination'
             },
             {
                 icon: 'akar-icons:npm-fill',
-                url: 'https://www.npmjs.com/package/@ghextercortes/djs-pagination'
+                url: 'https://www.npmjs.com/package/@falloutstudios/djs-pagination'
             }
         ]
     },
