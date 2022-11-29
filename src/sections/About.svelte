@@ -10,6 +10,7 @@
 
     .about {
         padding: 0 2rem;
+        padding-top: 4rem;
         display: flex;
         justify-content: center;
         background: rgba($color: e.$theme, $alpha: 0.9);

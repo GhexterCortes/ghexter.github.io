@@ -1,6 +1,6 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
-import { toHTML } from 'discord-markdown-fix';
+    import { toHTML } from 'discord-markdown-fix';
     import ScrollAnchor from './ScrollAnchor.svelte';
 
     export let thumbnail: string|undefined|null = null;
