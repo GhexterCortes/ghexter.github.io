@@ -20,7 +20,7 @@
 <div class="topbar" class:active={navOpen} class:scrolling={scrolling}>
     <div class="container">
         <div class="title">
-            <ScrollAnchor link="#">Not Ghex</ScrollAnchor>
+            <ScrollAnchor link="#">Cat++</ScrollAnchor>
             <div class="burger">
                 <button class="cheese" on:click={e => navOpen = !navOpen}>
                     {#if navOpen}

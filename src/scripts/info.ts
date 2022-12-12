@@ -1,7 +1,7 @@
 export const github = 'https://github.com/NotGhex';
 export const discordInvite = 'https://discord.com/channels/@me/749120018771345488';
 export const avatar = 'https://avatars.githubusercontent.com/u/69035887?v=4';
-export const description = `Hello, I am *Ghex*. I'm a student developer from Manila and I like to do nothing. I'm interested in HTML, CSS, JavaScript, PHP, Python, Java programming. I started my interest in coding when I was 11 years old and wrote my very first projects on 2019.<br><br><br>My goal is to make everything I think of.<br><br>*- Ghex*`;
+export const description = `Hello, I am **Ghex** *aka Cat++*. I'm a student developer from Manila and I like to do nothing. I'm interested in HTML, CSS, JavaScript, PHP, Python, Java programming. I started my interest in coding when I was 11 years old and wrote my very first projects on 2019.<br><br><br>My goal is to make everything I think of.<br><br>*- Ghex (Cat++)*`;
 export const socialLinks = [
     {
         icon: 'akar-icons:github-fill',
