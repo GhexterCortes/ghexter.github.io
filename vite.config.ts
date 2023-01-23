@@ -1,13 +1,8 @@
-import * as path from 'path';
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { sveltekit } from '@sveltejs/kit/vite';
+import type { UserConfig } from 'vite';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-    root: path.join(__dirname),
-    build: {
-        outDir: path.join(__dirname, 'dist'),
-        minify: true
-    },
-    plugins: [svelte()]
-})
+const config: UserConfig = {
+	plugins: [sveltekit()]
+};
+
+export default config;
