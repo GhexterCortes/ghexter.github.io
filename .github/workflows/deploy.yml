@@ -16,10 +16,10 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Build site
-        run: yarn run build
+        run: npm run build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
