@@ -12,14 +12,6 @@ export const socialLinks = [
         url: 'https://discordapp.com/users/749120018771345488'
     },
     {
-        icon: 'akar-icons:twitter-fill',
-        url: 'https://twitter.com/CortesGhexter'
-    },
-    {
-        icon: 'akar-icons:instagram-fill',
-        url: 'http://https//instagram.com/ghex.e_/'
-    },
-    {
         icon: 'ic:round-email',
         url: 'mailto:ghextershumies@gmail.com'
     }
