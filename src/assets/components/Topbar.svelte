@@ -1,9 +1,14 @@
 <script lang="ts">
+    import Icon from '@iconify/svelte';
     import '../css/main.scss';
+
+    let navActive: boolean = false;
 </script>
 
 <style lang="scss">
     @import '../css/variables.scss';
+
+    $height: 3rem;
 
     .topbar {
         position: fixed;
@@ -23,7 +28,7 @@
             width: calc(100% - 4rem);
             max-width: 800px;
             margin: 0 2rem;
-            height: 2.5rem;
+            height: $height;
             color: rgba($white, $alpha: 0.9);
 
             .topbar-title {
@@ -63,19 +68,97 @@
                     }
                 }
             }
+
+            .topbar-nav-toggle {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 680px) {
+        .topbar {
+            background: $dark;
+
+            .topbar-container {
+                position: static;
+
+                .topbar-links {
+                    position: absolute;
+                    top: 2.5rem;
+                    left: 0;
+                    height: 0px;
+                    background: $dark;
+                    backdrop-filter: $blur;
+                    display: block;
+                    overflow: auto;
+                    text-align: right;
+                    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) height;
+                    visibility: hidden;
+
+                    a {
+                        font-size: 1.5rem;
+                        padding: 1rem 0;
+                        margin: 1rem 2rem;
+                        font-family: 'Inter';
+                        font-weight: 600;
+                        border-radius: 0;
+                        position: relative;
+
+                        &:hover,
+                        &:focus {
+                            background: none;
+                            outline: none;
+                        }
+
+                        &:focus-visible {
+                            text-decoration: underline;
+                        }
+
+                        &:first-child {
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+
+                .topbar-nav-toggle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    right: 0;
+                    margin-right: 2rem;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border: none;
+                    background: none;
+                    font-size: 1.5rem;
+                }
+            }
+
+            &.active {
+                .topbar-container {
+                    .topbar-links {
+                        height: calc(100vh - 2.5rem);
+                        visibility: visible;
+                    }
+                }
+            }
         }
     }
 
     :global(body) {
-        padding-top: 2.5rem;
+        padding-top: $height;
     }
 </style>
 
-<div class="topbar">
+<div class="topbar" class:active={navActive}>
     <div class="topbar-container">
         <div class="topbar-title">
             <span>Ghex</span>
         </div>
+        <button class="topbar-nav-toggle" on:click={() => navActive = !navActive}>
+            <Icon icon="fluent:navigation-20-filled" />
+        </button>
         <div class="topbar-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>

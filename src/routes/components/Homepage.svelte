@@ -2,8 +2,6 @@
     // @ts-expect-error
     import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
-
-    let popcatActive: boolean = false;
 </script>
 
 <style lang="scss">
@@ -38,12 +36,12 @@
 
                 .homepage-greet {
                     color: $dim;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                 }
 
                 .homepage-intro {
                     margin-bottom: 0.5rem;
-                    font-size: 5rem;
+                    font-size: 6rem;
                     font-weight: 600;
                 }
 
@@ -51,6 +49,7 @@
                     color: $dim;
                     max-width: 410px;
                     margin-bottom: 2rem;
+                    font-size: 1rem;
                 }
 
                 .homepage-links {
@@ -63,6 +62,7 @@
                         border-radius: 5rem;
                         color: $primary;
                         font-weight: 500;
+                        font-size: 1rem;
                         text-decoration: none;
 
                         &:hover {
@@ -80,33 +80,18 @@
                     }
                 }
             }
-
-            .homepage-background {
-                position: absolute;
-                z-index: 2;
-                height: 500px;
-                width: 500px;
-                top: 50%;
-                right: -10%;
-                margin-top: -2rem;
-                transform: translateY(-50%);
-                background-image: url(./images/popcat.png);
-                background-size: cover;
-                background-position: 2%;
-                opacity: 0.1;
-                animation: both slideUp cubic-bezier(0.16, 0.73, 0.18, 1.07) 1s;
-                animation-delay: 1s;
-
-                &.active {
-                    background-position: 95%;
-                }
-            }
         }
-    }
 
-    @keyframes slideUp {
-        from { margin-top: 0; opacity: 0; }
-        to { margin-top: -2rem; opacity: 0.1; }
+        &::before {
+            content: 'Ghex';
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            font-size: 40rem;
+            font-family: 'Gloock';
+            color: rgba($dark, $alpha: 0.1);
+            transform: translateY(-50%);
+        }
     }
 </style>
 
@@ -123,17 +108,5 @@
                 <a href="#github">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
             </div>
         </div>
-        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div
-            class="homepage-background"
-            class:active={popcatActive}
-            tabindex="0"
-            on:keyup={(e) => e.key === 'Enter' ? popcatActive = false : null}
-            on:keydown={(e) => e.key === 'Enter' ? popcatActive = true : null}
-            on:mouseup={() => popcatActive = false}
-            on:mousedown={() => popcatActive = true}
-            on:mouseleave={() => popcatActive = false}
-        ></div>
     </div>
 </div>
