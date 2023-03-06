@@ -2,6 +2,7 @@
     // @ts-expect-error
     import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
+    import { githubUrl } from '../../scripts/app';
 </script>
 
 <style lang="scss">
@@ -105,7 +106,7 @@
             </p>
             <div class="homepage-links">
                 <a href="#about">About</a>
-                <a href="#github">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
+                <a href={githubUrl} target="_blank noreferrer">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
             </div>
         </div>
     </div>

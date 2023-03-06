@@ -164,8 +164,8 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="#github">GitHub</a>
-            <a href="#discord">Discord</a>
+            <a href="https://github.com/NotGhex" target="_blank noreferrer">GitHub</a>
+            <a href="https://discord.com/channels/@me/749120018771345488" target="_blank noreferrer">Discord</a>
         </div>
     </div>
 </div>
