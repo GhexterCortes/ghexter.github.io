@@ -148,10 +148,18 @@
 
     :global(body) {
         padding-top: $height;
+        scroll-padding-top: $height;
     }
 </style>
 
 <div class="topbar" class:active={navActive}>
+    {#if navActive}
+        <style>
+            html {
+                overflow: hidden;
+            }
+        </style>
+    {/if}
     <div class="topbar-container">
         <div class="topbar-title">
             <span>Ghex</span>
@@ -160,10 +168,10 @@
             <Icon icon="fluent:navigation-20-filled" />
         </button>
         <div class="topbar-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" on:click={() => navActive = false}>About</a>
+            <a href="#skills" on:click={() => navActive = false}>Skills</a>
+            <a href="#projects" on:click={() => navActive = false}>Projects</a>
+            <a href="#contact" on:click={() => navActive = false}>Contact</a>
             <a href="https://github.com/NotGhex" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://discord.com/channels/@me/749120018771345488" target="_blank" rel="noopener noreferrer">Discord</a>
         </div>

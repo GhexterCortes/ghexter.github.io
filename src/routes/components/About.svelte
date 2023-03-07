@@ -95,15 +95,47 @@
                             &:focus-visible {
                                 outline: 4px solid currentColor;
                             }
+
+                            &:first-child {
+                                margin-left: 0;
+                            }
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
             }
         }
     }
+
+    @media (max-width: 655px) {
+        .about .about-container .about-contents {
+            flex-direction: column;
+
+            .about-links {
+                margin-top: 2rem;
+
+                .about-image {
+                    display: none;
+                }
+
+                .about-links-container {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 365px) {
+        .about .about-container .about-contents .about-text .about-title {
+            font-size: 2.4rem;
+        }
+    }
 </style>
 
-<div class="about">
+<div class="about" id="about">
     <div class="about-container">
         <div class="about-contents">
             <div class="about-text">
