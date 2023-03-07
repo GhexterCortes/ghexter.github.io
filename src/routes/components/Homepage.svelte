@@ -3,6 +3,26 @@
     import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
     import { githubUrl } from '../../scripts/app';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        const navAnchors = document.querySelectorAll<HTMLAnchorElement>('.homepage-links > a');
+
+        navAnchors.forEach(a => {
+            const href = a.getAttribute('data-href');
+
+            if (!href?.startsWith('#')) return;
+
+            a.addEventListener('click', e => {
+                e.preventDefault();
+
+                const findId = document.querySelector(href!);
+                if (!findId) return;
+
+                findId.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+            });
+        });
+    });
 </script>
 
 <style lang="scss">
@@ -93,6 +113,24 @@
             transform: translateY(-50%);
         }
     }
+
+    @media (max-width: 400px) {
+        .homepage .homepage-container .homepage-title {
+            .homepage-greet {
+                font-size: 1.2rem;
+            }
+
+            .homepage-intro {
+                font-size: 4.5rem;
+            }
+        }
+    }
+
+    @media (max-width: 340px) {
+        .homepage .homepage-container .homepage-title .homepage-links a {
+            font-size: 0.9rem;
+        }
+    }
 </style>
 
 <div class="homepage">
@@ -104,7 +142,7 @@
                 I code open source things for the web and other projects.
             </p>
             <div class="homepage-links">
-                <a href="#about">About</a>
+                <a href="#about" data-href="#about">About</a>
                 <a href={githubUrl} target="_blank" rel="noopener noreferrer">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
             </div>
         </div>

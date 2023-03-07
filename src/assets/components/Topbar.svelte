@@ -1,8 +1,28 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
+    import { onMount } from 'svelte';
     import '../css/main.scss';
 
     let navActive: boolean = false;
+
+    onMount(() => {
+        const navAnchors = document.querySelectorAll<HTMLAnchorElement>('.topbar-links > a');
+
+        navAnchors.forEach(a => {
+            const href = a.getAttribute('data-href');
+
+            if (!href?.startsWith('#')) return;
+
+            a.addEventListener('click', e => {
+                e.preventDefault();
+
+                const findId = document.querySelector(href!);
+                if (!findId) return;
+
+                findId.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+            });
+        });
+    });
 </script>
 
 <style lang="scss">
@@ -77,23 +97,22 @@
 
     @media (max-width: 680px) {
         .topbar {
-            background: $dark;
-
             .topbar-container {
                 position: static;
 
                 .topbar-links {
-                    position: absolute;
-                    top: 2.5rem;
+                    position: fixed;
+                    top: 0;
                     left: 0;
-                    height: 0px;
-                    background: $dark;
+                    height: 100vh;
+                    padding-top: $height;
+                    background: rgba($dark, $alpha: 0.8);
                     backdrop-filter: $blur;
-                    display: block;
+                    display: none;
                     overflow: auto;
                     text-align: right;
                     transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) height;
-                    visibility: hidden;
+                    z-index: -1;
 
                     a {
                         font-size: 1.5rem;
@@ -136,10 +155,12 @@
             }
 
             &.active {
+                background: none;
+                backdrop-filter: none;
+
                 .topbar-container {
                     .topbar-links {
-                        height: calc(100vh - 2.5rem);
-                        visibility: visible;
+                        display: block;
                     }
                 }
             }
@@ -168,10 +189,10 @@
             <Icon icon="fluent:navigation-20-filled" />
         </button>
         <div class="topbar-links">
-            <a href="#about" on:click={() => navActive = false}>About</a>
-            <a href="#skills" on:click={() => navActive = false}>Skills</a>
-            <a href="#projects" on:click={() => navActive = false}>Projects</a>
-            <a href="#contact" on:click={() => navActive = false}>Contact</a>
+            <a href="#about" data-href="#about" on:click={() => navActive = false}>About</a>
+            <a href="#skills" data-href="#skills" on:click={() => navActive = false}>Skills</a>
+            <a href="#projects" data-href="#projects" on:click={() => navActive = false}>Projects</a>
+            <a href="#contact" data-href="#contact" on:click={() => navActive = false}>Contact</a>
             <a href="https://github.com/NotGhex" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://discord.com/channels/@me/749120018771345488" target="_blank" rel="noopener noreferrer">Discord</a>
         </div>
