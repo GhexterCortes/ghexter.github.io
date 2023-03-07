@@ -63,6 +63,7 @@
                         font-weight: 500;
                         font-size: 1rem;
                         text-decoration: none;
+                        white-space: nowrap;
 
                         &:hover {
                             background: rgba($dim, $alpha: 0.2);
