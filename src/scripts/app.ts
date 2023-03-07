@@ -12,6 +12,8 @@ export const aboutMeDescription = [
     ``,
     `> My goal is to make what my brain comes up with.`,
     `> *- Ghex*`,
+    ``,
+    `||I'm not 11 years old >:(||`
 ].join('\n');
 
 export const discordMarkdownOptions: HTMLOptions = {
