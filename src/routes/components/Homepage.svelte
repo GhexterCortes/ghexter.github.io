@@ -9,11 +9,9 @@
     @import '../../assets/css/variables.scss';
 
     .homepage {
+        @include Page;
         display: flex;
-        height: 100%;
-        width: 100%;
         overflow: hidden;
-        position: relative;
         justify-content: center;
         align-items: center;
 
@@ -106,7 +104,7 @@
             </p>
             <div class="homepage-links">
                 <a href="#about">About</a>
-                <a href={githubUrl} target="_blank noreferrer">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer">View Github <Icon icon="ph:caret-right-bold" inline={true} /></a>
             </div>
         </div>
     </div>
