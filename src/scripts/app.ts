@@ -4,7 +4,7 @@ export const email = 'ghextershumies@gmail.com';
 export const discordId = '749120018771345488';
 
 export const githubUrl = 'https://github.com/NotGhex';
-export const githubProfileUrl = 'https://avatars.githubusercontent.com/u/69035887?v=4';
+export const githubAvatarUrl = 'https://avatars.githubusercontent.com/u/69035887?v=4';
 export const discordProfileUrl = `https://discordapp.com/users/${discordId}`;
 
 export const aboutMeDescription = [

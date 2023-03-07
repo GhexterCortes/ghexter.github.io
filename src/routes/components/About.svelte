@@ -2,7 +2,7 @@
     // @ts-expect-error
     import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
-    import { aboutMeDescription, discordMarkdownOptions, discordProfileUrl, email, githubProfileUrl } from "../../scripts/app";
+    import { aboutMeDescription, discordMarkdownOptions, discordProfileUrl, email, githubAvatarUrl, githubUrl } from "../../scripts/app";
     import discordMarkdown from '@discord-components/markdown';
     import { onMount } from 'svelte';
 
@@ -147,11 +147,11 @@
             <div class="about-links">
                 <div class="about-image">
                     <div class="about-image-container">
-                        <img src={githubProfileUrl} alt="">
+                        <img src={githubAvatarUrl} alt="">
                     </div>
                 </div>
                 <div class="about-links-container">
-                    <a href={githubProfileUrl} target="_blank" rel="noopener noreferrer">
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                         <Icon icon="fa-brands:github" />
                     </a>
                     <a href={discordProfileUrl} target="_blank" rel="noopener noreferrer">
