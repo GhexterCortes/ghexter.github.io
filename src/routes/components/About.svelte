@@ -44,8 +44,9 @@
                     }
 
                     .about-description-container {
-                        line-height: 1.2rem;
-                        font-size: 0.9rem;
+                        line-height: 1.5rem;
+                        font-size: 1rem;
+                        color: rgba($color: #fff, $alpha: 0.8);
                         font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     }
                 }
