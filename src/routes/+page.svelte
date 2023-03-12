@@ -3,6 +3,7 @@
     import Homepage from './components/Homepage.svelte';
     import '../assets/css/main.scss';
     import About from './components/About.svelte';
+    import Skills from './components/Skills.svelte';
 </script>
 
 <svelte:head>
@@ -12,3 +13,4 @@
 <Topbar/>
 <Homepage/>
 <About/>
+<Skills/>

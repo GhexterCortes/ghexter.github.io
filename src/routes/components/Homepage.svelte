@@ -1,9 +1,8 @@
 <script lang="ts">
-    // @ts-expect-error
-    import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
     import { githubUrl } from '../../scripts/app';
     import { onMount } from 'svelte';
+    import Gradient from '../../assets/components/Gradient.svelte';
 
     onMount(() => {
         const navAnchors = document.querySelectorAll<HTMLAnchorElement>('.homepage-links > a');
@@ -30,16 +29,11 @@
 
     .homepage {
         @include Page;
-        display: flex;
-        overflow: hidden;
-        justify-content: center;
         align-items: center;
+        overflow: hidden;
 
         .homepage-container {
-            width: calc(100% - 4rem);
-            max-width: 800px;
-            margin: 0 2rem;
-            padding: 0 1rem;
+            @include PageContainer;
             position: relative;
             z-index: 1;
 
@@ -137,7 +131,7 @@
     <div class="homepage-container">
         <div class="homepage-title">
             <h3 class="homepage-greet">Hi, There</h3>
-            <h1 class="homepage-intro">I am <GradientText style="font: inherit; display: inline; letter-spacing: inherit; margin: inherit; padding: inherit;">Ghex</GradientText></h1>
+            <h1 class="homepage-intro">I am <Gradient>Ghex</Gradient></h1>
             <p class="homepage-subtitle">
                 I code open source things for the web and other projects.
             </p>

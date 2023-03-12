@@ -1,10 +1,9 @@
 <script lang="ts">
-    // @ts-expect-error
-    import GradientText from 'svelte-gradient-typography';
     import Icon from '@iconify/svelte';
     import { aboutMeDescription, discordMarkdownOptions, discordProfileUrl, email, githubAvatarUrl, githubUrl } from "../../scripts/app";
     import discordMarkdown from '@discord-components/markdown';
     import { onMount } from 'svelte';
+import Gradient from '../../assets/components/Gradient.svelte';
 
     onMount(() => {
         const spoilers = document.querySelectorAll<HTMLDivElement>('.d-spoiler');
@@ -16,16 +15,11 @@
 
     .about {
         @include Page;
-        display: flex;
-        justify-content: center;
         min-height: unset;
         height: unset;
 
         .about-container {
-            width: calc(100% - 4rem);
-            max-width: 800px;
-            margin: 0 2rem;
-            padding: 0 1rem;
+            @include PageContainer;
             position: relative;
             z-index: 1;
 
@@ -37,10 +31,7 @@
                     width: 100%;
 
                     .about-title {
-                        margin-bottom: 2rem;
-                        font-size: 3rem;
-                        font-family: 'Gloock';
-                        letter-spacing: 0.1rem;
+                        @include PageTitle;
                     }
 
                     .about-description-container {
@@ -139,7 +130,7 @@
     <div class="about-container">
         <div class="about-contents">
             <div class="about-text">
-                <h2 class="about-title">About <GradientText style="font: inherit; display: inline; letter-spacing: inherit; margin: inherit; padding: inherit;">Me</GradientText></h2>
+                <h2 class="about-title">About <Gradient>Me</Gradient></h2>
                 <div class="about-description-container discord">
                     {@html discordMarkdown.toHTML(aboutMeDescription, discordMarkdownOptions)}
                 </div>

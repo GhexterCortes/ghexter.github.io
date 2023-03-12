@@ -14,4 +14,20 @@ $shadow: 0px 0px 10px rgba($black, $alpha: 0.1);
     width: 100%;
     min-height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin PageContainer {
+    width: calc(100% - 4rem);
+    max-width: 800px;
+    margin: 0 2rem;
+    padding: 0 1rem;
+}
+
+@mixin PageTitle {
+    font-size: 3rem;
+    font-family: 'Gloock';
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
 }
