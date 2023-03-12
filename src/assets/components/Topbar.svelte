@@ -87,6 +87,10 @@
                         outline: 2px solid rgba($white, $alpha: 0.8);
                     }
                 }
+
+                .topbar-leave {
+                    display: none;
+                }
             }
 
             .topbar-nav-toggle {
@@ -136,6 +140,13 @@
                         &:first-child {
                             margin-top: 4rem;
                         }
+                    }
+
+                    .topbar-leave {
+                        display: block;
+                        border: none;
+                        background: none;
+                        opacity: 0;
                     }
                 }
 
@@ -195,6 +206,7 @@
             <a href="#contact" data-href="#contact" on:click={() => navActive = false}>Contact</a>
             <a href="https://github.com/NotGhex" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://discord.com/channels/@me/749120018771345488" target="_blank" rel="noopener noreferrer">Discord</a>
+            <button class="topbar-leave" on:focus={() => navActive = false}></button>
         </div>
     </div>
 </div>
