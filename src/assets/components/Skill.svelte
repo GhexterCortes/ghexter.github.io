@@ -55,6 +55,7 @@ import Icon from '@iconify/svelte';
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: -1;
         }
 
         .skill-percent {
@@ -80,7 +81,7 @@ import Icon from '@iconify/svelte';
             }
 
             .skill-progress {
-                animation: adjustWidth infinite 5s;
+                animation: adjustWidth infinite 5s, rainbowBackground infinite 5s;
             }
 
             .skill-percent {
@@ -123,8 +124,8 @@ import Icon from '@iconify/svelte';
         {#if icon}<Icon icon={icon} class="icon"/>{/if}
         {#if name}<span class="skill-name">{name}</span>{/if}
     </div>
-    <span class="skill-progress" style:background style="width: {width}%"></span>
-    <span class="skill-background" style:background style="width: 100%"></span>
+    <span class="skill-progress" style="{name !== "LOLCODE" ? `width: ${width}%; background: ${background};` : ''}"></span>
+    <span class="skill-background" style="width: 100%; {name !== "LOLCODE" ? `background: ${background};` : ''}"></span>
     <span class="skill-percent" style="color: {percentColor || '#dbdbdb'}">
         {#if name !== "LOLCODE"}
             {width}%
