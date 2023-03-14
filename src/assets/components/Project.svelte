@@ -38,6 +38,7 @@
             > img {
                 object-fit: cover;
                 max-width: 150%;
+                user-select: none;
             }
         }
 
@@ -55,7 +56,7 @@
             &::before {
                 position: absolute;
                 content: '';
-                height: 250%;
+                height: 300%;
                 width: 100%;
                 bottom: 0;
                 left: 0;

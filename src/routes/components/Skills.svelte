@@ -1,7 +1,6 @@
 <script lang="ts">
-    import Gradient from "../../assets/components/Gradient.svelte";
-import Skill from '../../assets/components/Skill.svelte';
-import { skills } from '../../scripts/app';
+    import Skill from '../../assets/components/Skill.svelte';
+    import { skills } from '../../scripts/app';
 </script>
 <style lang="scss">
     @import "../../assets/css/variables.scss";
