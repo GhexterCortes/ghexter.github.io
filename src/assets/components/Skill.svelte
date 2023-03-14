@@ -69,7 +69,7 @@ import Icon from '@iconify/svelte';
             display: flex;
             align-items: center;
             justify-content: center;
-            text-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 1);
+            text-shadow: 0px 0px 5px #000000;
         }
 
         &.lol {

@@ -4,6 +4,7 @@
     import '../assets/css/main.scss';
     import About from './components/About.svelte';
     import Skills from './components/Skills.svelte';
+    import Projects from './components/Projects.svelte';
 </script>
 
 <svelte:head>
@@ -14,3 +15,4 @@
 <Homepage/>
 <About/>
 <Skills/>
+<Projects/>

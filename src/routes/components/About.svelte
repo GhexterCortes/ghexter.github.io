@@ -101,6 +101,13 @@ import Gradient from '../../assets/components/Gradient.svelte';
         }
     }
 
+    @media (max-width: 730px) {
+        .about .about-container {
+            margin: 0 0.5rem;
+            width: calc(100% - 1rem);
+        }
+    }
+
     @media (max-width: 655px) {
         .about .about-container .about-contents {
             flex-direction: column;

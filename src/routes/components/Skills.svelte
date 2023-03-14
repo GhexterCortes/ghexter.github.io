@@ -9,14 +9,14 @@ import { skills } from '../../scripts/app';
     .skills {
         @include Page;
         min-height: 50%;
+        padding-top: 4rem;
 
         .skills-container {
             @include PageContainer;
-            padding-top: 2rem;
             margin-bottom: 1rem;
 
             .skills-title {
-                @include PageTitle;
+                @include PageTitle2;
             }
 
             .skills-flex {
@@ -28,6 +28,13 @@ import { skills } from '../../scripts/app';
                     margin: 5px;
                 }
             }
+        }
+    }
+
+    @media (max-width: 730px) {
+        .skills .skills-container {
+            margin: 0;
+            width: 100%;
         }
     }
 

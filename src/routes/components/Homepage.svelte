@@ -108,6 +108,13 @@
         }
     }
 
+    @media (max-width: 730px) {
+        .homepage .homepage-container {
+            margin: 0 0.5rem;
+            width: calc(100% - 1rem);
+        }
+    }
+
     @media (max-width: 400px) {
         .homepage .homepage-container .homepage-title {
             .homepage-greet {

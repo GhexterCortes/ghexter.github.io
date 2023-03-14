@@ -32,14 +32,14 @@ export const discordMarkdownOptions: HTMLOptions = {
 export const skills = [
     {
         name: "Typescript",
-        width: 90,
+        width: 80,
         color: "#fff",
         background: "rgb(49, 120, 198)",
         icon: "bxl:typescript"
     },
     {
         name: "NodeJs",
-        width: 90,
+        width: 75,
         color: "#fff",
         background: "rgb(83, 158, 67)",
         icon: "ion:logo-nodejs"
@@ -71,5 +71,116 @@ export const skills = [
         color: "#fff",
         background: "rgb(141, 39, 1)",
         icon: "file-icons:lolcode"
+    }
+];
+
+export let projects = [
+    {
+        title: 'Reciple',
+        description: 'Reciple is a simple Discord.js handler that just works!',
+        image: 'https://i.imgur.com/3SksGEZ.png',
+        color: '#5865f2',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/Reciple'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/reciple'
+            },
+            {
+                icon: 'icon-park-solid:doc-search',
+                url: 'https://reciple.js.org'
+            }
+        ]
+    },
+    {
+        title: 'Djs Pagination',
+        description: 'A reaction and button pagination librarry for Discord.js v14.',
+        image: 'https://i.imgur.com/NiMNxhM.png',
+        color: '#3f7ff2',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/djs/tree/main/packages/pagination'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/@falloutstudios/djs-pagination'
+            },
+            {
+                icon: 'icon-park-solid:doc-search',
+                url: 'https://falloutstudios.github.io/djs/modules/_falloutstudios_djs_pagination.html'
+            }
+        ]
+    },
+    {
+        title: 'Eris Collectors',
+        description: 'A simple package that collects eris message, interaction, or reactions.',
+        image: 'https://i.imgur.com/zrLR1d4.png',
+        color: '#975df1',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/NotGhex/eris-collectors'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/eris-collectors'
+            }
+        ]
+    },
+    {
+        title: 'Djs Scam Links',
+        description: 'An anti scam links library for any project specially discord related projects. Scam domains are provided by nikolaischunk on Github',
+        image: 'https://i.imgur.com/a7WVNSV.png',
+        color: '#f8494a',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/djs/tree/main/packages/scam-links'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/@falloutstudios/djs-scam-links'
+            },
+            {
+                icon: 'icon-park-solid:doc-search',
+                url: 'https://falloutstudios.github.io/djs/modules/_falloutstudios_djs_scam_links.html'
+            }
+        ]
+    },
+    {
+        title: 'Share.io',
+        description: 'A simple file sharing cli tool made with socket.io.',
+        image: 'https://i.imgur.com/8MeyYSa.png',
+        color: '#3e97f1',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/NotGhex/shareio'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/@shareio/cli'
+            }
+        ]
+    },
+    {
+        title: 'Fallout Utility',
+        description: 'A collection of useful utility functions, classes, and types used by FalloutStudios projects.',
+        image: 'http://i.imgur.com/aFbrZtU.png',
+        color: '#dd3a36',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/fallout-utility'
+            },
+            {
+                icon: 'gg:npm',
+                url: 'https://www.npmjs.com/package/fallout-utility'
+            }
+        ]
     }
 ];
