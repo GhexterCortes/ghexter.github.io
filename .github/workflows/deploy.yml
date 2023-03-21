@@ -16,11 +16,14 @@ jobs:
           node-version: 16
           cache: 'pnpm'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+
       - name: Install Dependencies
-        run: npm i pnpm -g && npx pnpm install
+        run: pnpm install
 
       - name: Build Site
-        run: npx pnpm run build
+        run: pnpm run build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
