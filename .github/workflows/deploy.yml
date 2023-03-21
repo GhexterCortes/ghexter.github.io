@@ -7,22 +7,23 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Install Node v16
         uses: actions/setup-node@v2
         with:
           node-version: 16
+          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Install Dependencies
+        run: pnpm install
 
-      - name: Build site
-        run: yarn run build
+      - name: Build Site
+        run: pnpm run build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: dist
+          folder: build
