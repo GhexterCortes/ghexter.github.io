@@ -67,7 +67,7 @@ import { projects } from '../../scripts/app';
     }
 </style>
 
-<div class="projects">
+<div class="projects" id="projects">
     <div class="projects-container">
         <h2 class="projects-title">PROJECTS</h2>
         <div class="projects-content">

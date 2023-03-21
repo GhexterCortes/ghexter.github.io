@@ -1,5 +1,6 @@
 <script lang="ts">
-import Icon from '@iconify/svelte';
+    import Icon from '@iconify/svelte';
+    import isMobile from 'is-mobile';
 
     export let icon: string|null = null;
     export let name: string;
@@ -119,7 +120,7 @@ import Icon from '@iconify/svelte';
     }
 </style>
 
-<div class="skill" {...$$props} style:color class:lol={name == "LOLCODE"}>
+<div class="skill" {...$$props} style:color class:lol={name == "LOLCODE"} style={isMobile() && name === "LOLCODE" ? 'display: none' : ''}>
     <div class="skill-label">
         {#if icon}<Icon icon={icon} class="icon"/>{/if}
         {#if name}<span class="skill-name">{name}</span>{/if}

@@ -31,8 +31,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: scale(1.1);
-            filter: blur(1px);
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
             > img {
@@ -81,7 +79,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 transition: 0.5s;
-                max-height: 3rem;
+                max-height: 0;
                 margin-top: 10px;
                 color: #dbdbdb;
             }
@@ -110,8 +108,8 @@
             box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
 
             .project-cover {
-                transform: scale(1);
-                filter: blur(0px);
+                transform: scale(1.25);
+                filter: blur(5px) saturate(120%);
             }
 
             .project-description {
@@ -123,7 +121,7 @@
 
 <div class="project">
     <div class="project-cover">
-        <img src={image} alt="">
+        <img src={image} alt="" on:contextmenu|preventDefault={() => false}>
     </div>
     <div class="project-content">
         <h3 class="project-title" style:color style="font-size: {titleSize || ''};">{title}</h3>

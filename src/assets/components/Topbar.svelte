@@ -161,7 +161,7 @@
                     width: 2.5rem;
                     border: none;
                     background: none;
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
             }
 
@@ -197,7 +197,11 @@
             <span>Ghex</span>
         </div>
         <button class="topbar-nav-toggle" on:click={() => navActive = !navActive}>
-            <Icon icon="fluent:navigation-20-filled" />
+            {#if navActive}
+                <Icon icon="heroicons:x-mark-20-solid" />
+            {:else}
+                <Icon icon="lucide:equal" />
+            {/if}
         </button>
         <div class="topbar-links">
             <a href="#about" data-href="#about" on:click={() => navActive = false}>About</a>

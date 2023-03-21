@@ -5,6 +5,7 @@ specifiers:
   '@iconify/svelte': ^3.1.0
   '@sveltejs/adapter-static': ^2.0.1
   '@sveltejs/kit': ^1.10.0
+  is-mobile: ^4.0.0
   sass: ^1.58.3
   svelte: ^3.54.0
   svelte-check: ^3.0.1
@@ -15,6 +16,7 @@ specifiers:
 
 dependencies:
   '@discord-components/markdown': 0.2.3
+  is-mobile: 4.0.0
 
 devDependencies:
   '@iconify/svelte': 3.1.0_svelte@3.55.1
@@ -640,6 +642,10 @@ packages:
     dependencies:
       is-extglob: 2.1.1
     dev: true
+
+  /is-mobile/4.0.0:
+    resolution: {integrity: sha512-mlcHZA84t1qLSuWkt2v0I2l61PYdyQDt4aG1mLIXF5FDMm4+haBCxCPYSr/uwqQNRk1MiTizn0ypEuRAOLRAew==}
+    dev: false
 
   /is-number/7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}

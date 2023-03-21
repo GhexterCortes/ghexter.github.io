@@ -155,7 +155,7 @@ import Gradient from '../../assets/components/Gradient.svelte';
             <div class="about-links">
                 <div class="about-image">
                     <div class="about-image-container">
-                        <img src={githubAvatarUrl} alt="">
+                        <img src={githubAvatarUrl} alt="" on:contextmenu|preventDefault={() => false}>
                     </div>
                 </div>
                 <div class="about-links-container">

@@ -2,6 +2,7 @@ import type { HTMLOptions } from '@discord-components/markdown';
 
 export const email = 'ghextershumies@gmail.com';
 export const discordId = '749120018771345488';
+export const discordTag = 'Cat++#0999';
 
 export const githubUrl = 'https://github.com/NotGhex';
 export const githubAvatarUrl = 'https://avatars.githubusercontent.com/u/69035887?v=4';
