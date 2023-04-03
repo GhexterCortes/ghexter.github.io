@@ -96,6 +96,22 @@ export let projects = [
             }
         ]
     },
+     {
+        title: 'Kirin',
+        description: 'A Discord bot that lets you start your Minecraft servers in Discord',
+        image: 'https://i.imgur.com/rra7lUU.png',
+        color: '#3f2ce6',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/Kirin'
+            },
+            {
+                icon: 'fa6-solid:faucet',
+                url: 'https://www.spigotmc.org/resources/kirin.100456/'
+            }
+        ]
+    },
     {
         title: 'Djs Pagination',
         description: 'A reaction and button pagination librarry for Discord.js v14.',
@@ -181,22 +197,6 @@ export let projects = [
             {
                 icon: 'gg:npm',
                 url: 'https://www.npmjs.com/package/fallout-utility'
-            }
-        ]
-    },
-    {
-        title: 'Kirin',
-        description: 'A Discord bot that lets you start your Minecraft servers in Discord',
-        image: 'https://i.imgur.com/rra7lUU.png',
-        color: '#3f2ce6',
-        links: [
-            {
-                icon: 'bi:github',
-                url: 'https://github.com/FalloutStudios/Kirin'
-            },
-            {
-                icon: 'fa6-solid:faucet',
-                url: 'https://www.spigotmc.org/resources/kirin.100456/'
             }
         ]
     }
