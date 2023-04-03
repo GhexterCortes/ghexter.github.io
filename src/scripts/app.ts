@@ -187,7 +187,7 @@ export let projects = [
     {
         title: 'Kirin',
         description: 'A Discord bot that lets you start your Minecraft servers in Discord',
-        image: 'https://i.imgur.com/QN731RF.png',
+        image: 'https://i.imgur.com/rra7lUU.png',
         color: '#3f2ce6',
         links: [
             {
