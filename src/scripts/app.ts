@@ -183,5 +183,21 @@ export let projects = [
                 url: 'https://www.npmjs.com/package/fallout-utility'
             }
         ]
+    },
+    {
+        title: 'Kirin',
+        description: 'A Discord bot that lets you start your Minecraft servers in Discord',
+        image: 'https://i.imgur.com/QN731RF.png',
+        color: '#3f2ce6',
+        links: [
+            {
+                icon: 'bi:github',
+                url: 'https://github.com/FalloutStudios/Kirin'
+            },
+            {
+                icon: 'fa6-solid:faucet',
+                url: 'https://www.spigotmc.org/resources/kirin.100456/'
+            }
+        ]
     }
 ];
