@@ -2,6 +2,7 @@
     import Icon from '@iconify/svelte';
     import { onMount } from 'svelte';
     import '../css/main.scss';
+    import { discordProfileUrl, githubUrl } from '../../scripts/app';
 
     let navActive: boolean = false;
 
@@ -208,8 +209,8 @@
             <a href="#skills" data-href="#skills" on:click={() => navActive = false}>Skills</a>
             <a href="#projects" data-href="#projects" on:click={() => navActive = false}>Projects</a>
             <a href="#contact" data-href="#contact" on:click={() => navActive = false}>Contact</a>
-            <a href="https://github.com/NotGhex" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://discord.com/channels/@me/749120018771345488" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href={githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={discordProfileUrl} target="_blank" rel="noopener noreferrer">Discord</a>
             <button class="topbar-leave" on:focus={() => navActive = false}></button>
         </div>
     </div>

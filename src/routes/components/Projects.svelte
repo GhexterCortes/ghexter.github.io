@@ -1,7 +1,6 @@
 <script lang="ts">
-import Project from '../../assets/components/Project.svelte';
-import { projects } from '../../scripts/app';
-
+    import Project from '../../assets/components/Project.svelte';
+    import { projects } from '../../scripts/app';
 </script>
 
 <style lang="scss">
@@ -15,7 +14,7 @@ import { projects } from '../../scripts/app';
 
         .projects-container {
             @include PageContainer;
-            max-width: 1366px;
+            max-width: 1300px;
 
             .projects-title {
                 @include PageTitle;
@@ -50,9 +49,35 @@ import { projects } from '../../scripts/app';
             .projects-content {
                 :global(.project) {
                     height: 300px;
-                    width: 500px;
-                    margin: 0;
-                    margin-bottom: 10px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 670px) {
+        .projects .projects-container {
+            margin: 0;
+            width: 100%;
+
+            .projects-content {
+                :global(.project) {
+                    height: 290px;
+                    width: 290px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 670px) {
+        .projects .projects-container {
+            margin: 0;
+            width: 100%;
+
+            .projects-content {
+                :global(.project) {
+                    height: 300px;
+                    width: 400px;
                 }
             }
         }

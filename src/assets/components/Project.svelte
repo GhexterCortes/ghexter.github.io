@@ -1,13 +1,13 @@
 <script lang="ts">
     import Icon from '@iconify/svelte';
+    import colorsea from 'colorsea';
+    import isMobile from 'is-mobile';
 
     export let title: string;
     export let image: string;
     export let description: string|null = '';
     export let links: { icon: string; url: string; }[] = [];
     export let color: string = '#fff';
-    export let secondary: string = '#000';
-    export let linkColor: string = color;
     export let titleSize: string = '';
 </script>
 
@@ -22,7 +22,15 @@
         height: 320px;
         width: 320px;
         margin: 5.5px;
-        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        --transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        --mildTransition: 0.2s;
+
+        &.mobile {
+            --transition: 0s;
+        }
+
+        transition: var(--mildTransition);
 
         .project-cover {
             position: relative;
@@ -31,7 +39,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: var(--mildTransition);
 
             > img {
                 object-fit: cover;
@@ -58,17 +66,19 @@
                 width: 100%;
                 bottom: 0;
                 left: 0;
-                background: linear-gradient(transparent, rgba($color: #000, $alpha: 1));
+                background: linear-gradient(transparent, rgba($color: #000000, $alpha: 1));
                 z-index: -1;
             }
 
             .project-title {
-                font-size: 2rem;
+                font-size: 1.6rem;
                 white-space: nowrap;
                 max-width: 100%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-weight: bolder;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
             }
 
             .project-description {
@@ -78,7 +88,7 @@
                 max-width: 100%;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                transition: 0.5s;
+                transition: var(--transition);
                 max-height: 0;
                 margin-top: 10px;
                 color: #dbdbdb;
@@ -102,14 +112,28 @@
             }
         }
 
+        &.mobile.active,
         &:hover,
         &:focus-within {
+            .project-content {
+                &::before {
+                    background: currentColor;
+                    opacity: 0.5;
+                }
+            }
+
             transform: scale(1.02);
             box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.5);
 
             .project-cover {
-                transform: scale(1.25);
-                filter: blur(5px) saturate(120%);
+                transform: scale(1.2);
+                filter: blur(100px) saturate(120%);
+
+                > img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: none;
+                }
             }
 
             .project-description {
@@ -119,18 +143,18 @@
     }
 </style>
 
-<div class="project">
+<div class="project" class:mobile={isMobile()}>
     <div class="project-cover">
         <img src={image} alt="" on:contextmenu|preventDefault={() => false}>
     </div>
-    <div class="project-content">
-        <h3 class="project-title" style:color style="font-size: {titleSize || ''};">{title}</h3>
+    <div class="project-content" style="color: {colorsea(color).darken(60).hex()}">
+        <h3 class="project-title" title={title} style="font-size: {titleSize || ''}; color: {colorsea(color).saturate(30).lighten(10).hex()}">{title}</h3>
         {#if description}
             <div class="project-description">{description}</div>
         {/if}
         <div class="project-links">
             {#each links as link}
-                <a href={link.url} style="background: {secondary}; color: {linkColor};" target="_blank" rel="noopener noreferrer">
+                <a href={link.url} style="background: {colorsea(color).alpha(10).hex()}; color: {colorsea(color).darken(5).hex()};" target="_blank" rel="noopener noreferrer">
                     <Icon icon={link.icon}/>
                 </a>
             {/each}
