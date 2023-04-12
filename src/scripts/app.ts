@@ -35,36 +35,42 @@ export const skills = [
         name: "Typescript",
         width: 80,
         color: "#fff",
+        background: "rgb(49, 120, 198)",
         icon: "bxl:typescript"
     },
     {
         name: "NodeJs",
         width: 75,
         color: "#fff",
+        background: "rgb(83, 158, 67)",
         icon: "ion:logo-nodejs"
     },
     {
         name: "Sass",
         width: 60,
         color: "#000",
+        background: "rgb(205, 103, 153)",
         icon: "la:sass"
     },
     {
         name: "Svelte",
         width: 70,
         color: "#fff",
+        background: "rgb(255, 62, 0)",
         icon: "carbon:logo-svelte"
     },
     {
         name: "Vanilla Js",
         width: 90,
         color: "#000",
+        background: "rgb(247, 223, 30)",
         icon: "ion:logo-javascript"
     },
     {
         name: "LOLCODE",
         width: 50,
         color: "#fff",
+        background: "rgb(141, 39, 1)",
         icon: "file-icons:lolcode"
     }
 ];
