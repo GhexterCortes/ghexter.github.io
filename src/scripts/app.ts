@@ -35,42 +35,36 @@ export const skills = [
         name: "Typescript",
         width: 80,
         color: "#fff",
-        background: "rgb(49, 120, 198)",
         icon: "bxl:typescript"
     },
     {
         name: "NodeJs",
         width: 75,
         color: "#fff",
-        background: "rgb(83, 158, 67)",
         icon: "ion:logo-nodejs"
     },
     {
         name: "Sass",
         width: 60,
         color: "#000",
-        background: "rgb(205, 103, 153)",
         icon: "la:sass"
     },
     {
         name: "Svelte",
         width: 70,
         color: "#fff",
-        background: "rgb(255, 62, 0)",
         icon: "carbon:logo-svelte"
     },
     {
         name: "Vanilla Js",
         width: 90,
         color: "#000",
-        background: "rgb(247, 223, 30)",
         icon: "ion:logo-javascript"
     },
     {
         name: "LOLCODE",
         width: 50,
         color: "#fff",
-        background: "rgb(141, 39, 1)",
         icon: "file-icons:lolcode"
     }
 ];
@@ -78,7 +72,7 @@ export const skills = [
 export let projects = [
     {
         title: 'Reciple',
-        description: 'Reciple is a simple Discord.js handler that just works!',
+        description: 'Reciple is a simple Discord.js framework that just works!',
         image: 'https://i.imgur.com/3SksGEZ.png',
         color: '#5865f2',
         links: [
@@ -98,7 +92,7 @@ export let projects = [
     },
      {
         title: 'Kirin',
-        description: 'A Discord bot that lets you start your Minecraft servers in Discord',
+        description: 'A Discord bot that lets you start your Minecraft servers in Discord.',
         image: 'https://i.imgur.com/rra7lUU.png',
         color: '#3f2ce6',
         links: [

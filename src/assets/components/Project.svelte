@@ -23,8 +23,8 @@
         width: 320px;
         margin: 5.5px;
 
-        --transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        --mildTransition: 0.2s;
+        --transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        --mildTransition: 0.5s;
 
         &.mobile {
             --transition: 0s;
