@@ -8,6 +8,8 @@ export const pronouns = ['He', 'They'];
 
 export const displayPictureURL = 'https://avatars.githubusercontent.com/u/69035887?v=4';
 export const discordProfileURL = `https://discordapp.com/users/${discordUserId}`;
+export const gitHubProfileURL = `https://github.com/${gitHubUsername}`;
+export const instagramProfileURL = `https://instagram.com/${discordUsername}`;
 
 export const colors = {
     backgroundColor: colorsea('#111111'),
