@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.discord-markdown {
+    .d-mention {
+        display: inline-block;
+        background: rgba($secondaryColor, $alpha: 0.2);
+        color: saturate($secondaryColor, $amount: 1);
+        font-size: 0.9em;
+        padding: 0.1em 0.3rem;
+        border-radius: 3px;
+        cursor: default;
+
+        &:hover {
+            background: rgba($secondaryColor, $alpha: 0.3);
+        }
+    }
+
+    .d-spoiler {
+        background: $darkColor;
+        font-size: 0.9em;
+        padding: 0.1em 0.3rem;
+        border-radius: 3px;
+        transition: 0.1s;
+        color: $darkColor;
+        user-select: none;
+
+        &.active {
+            color: currentColor;
+            user-select: text;
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $darkColor;
+        padding: 0 0.3rem;
+    }
+}
