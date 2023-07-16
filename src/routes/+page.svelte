@@ -8,8 +8,10 @@
     import catFaceSmirk from '@iconify/icons-fluent-emoji/cat-with-wry-smile';
     import LinkButton from '../assets/components/LinkButton.svelte';
     import { discordProfileURL, gitHubProfileURL, instagramProfileURL, threadsProfileURL } from '../assets/scripts/profile';
+    import { onMount } from 'svelte';
 
     let currentIndex = 0;
+    let title: HTMLAnchorElement;
 
     function getCatIcon(): IconifyIcon {
         const icons = [catFace, catFaceLaugh, catFaceSmirk];
@@ -21,6 +23,10 @@
     }
 
     let catIcon = getCatIcon();
+
+    onMount(() => {
+        setTimeout(() => title.classList.remove('active'), 1000)
+    });
 </script>
 
 <style lang="scss">
@@ -53,10 +59,27 @@
                 text-decoration: none;
                 font-weight: 700;
                 text-shadow: 0px 0px 10px rgba(255, 166, 0, 0.247);
-            }
 
-            :global(.icon) {
-                font-size: 1.5em;
+                :global(.icon) {
+                    font-size: 1.5em;
+                    z-index: 1;
+                    transition: 0.2s;
+                }
+
+                .plvsplus {
+                    transition: 0.2s;
+                }
+
+                &.active {
+                    :global(.icon) {
+                        translate: 50%;
+                    }
+
+                    .plvsplus {
+                        translate: -50%;
+                        opacity: 0;
+                    }
+                }
             }
         }
 
@@ -88,7 +111,9 @@
 
 <div class="content">
     <div class="title">
-        <a title="Tap to change icon" href="javascript:void(0)" on:click={() => catIcon = getCatIcon()}><Icon icon={catIcon} class="icon"/>++</a>
+        <a class="active" bind:this={title} title="Tap to change icon" href="javascript:void(0)" on:click={() => catIcon = getCatIcon()}>
+            <Icon icon={catIcon} class="icon"/><span class="plvsplus">++</span>
+        </a>
     </div>
 
     <Header/>

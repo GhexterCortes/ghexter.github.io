@@ -21,7 +21,7 @@ export const colors = {
 
 export const description = `Hello, I am Ghex, also known as Cat or Cat++. I am a hobbyist programmer. I like cats and computers.
 
-I'm also part of the \`:pride-heart: LGBTQIA+\` community and actively fighting for equal rights, and as a member of the queer community, I stan these iconic queens such as [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms), [Lana Del Rey](https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa), [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02), and many more.`;
+I'm also part of the \`:pride-heart: LGBTQIA+\` community and fighting for equal rights, and as a member of the queer community, I stan these iconic queens such as [Lady Gaga](https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms), [Lana Del Rey](https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa), [Beyoncé](https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m), [Taylor Swift](https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02), and many more.`;
 
 export const defaultEmojis: Record<string, string> = {
     'pride-heart': 'https://cdn3.emoji.gg/emojis/3082-rainbow-pride-heart.png'
