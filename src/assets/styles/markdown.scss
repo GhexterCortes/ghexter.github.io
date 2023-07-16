@@ -30,8 +30,30 @@
         }
     }
 
+    a {
+        color: rgba($secondaryColor, $alpha: 1);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
     blockquote {
         border-left: 4px solid $darkColor;
         padding: 0 0.3rem;
+    }
+
+    img.emoji {
+        height: 1.3em;
+        width: 1.3em;
+        vertical-align: middle;
+    }
+
+    code {
+        background: rgba($color: #000, $alpha: 0.3);
+        padding: 0.2rem;
+        border-radius: 5px;
     }
 }

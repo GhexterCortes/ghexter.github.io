@@ -1,6 +1,6 @@
 <script lang="ts">
     import '../styles/markdown.scss';
-    import { discordUserId, displayName } from '../scripts/profile';
+    import { defaultEmojis, discordUserId, displayName } from '../scripts/profile';
     import discordMarkdown from '@discord-components/markdown';
     import { onMount } from 'svelte';
 
@@ -20,10 +20,20 @@
         }
     };
 
+    export let emojis: Record<string, string> = defaultEmojis;
+
     onMount(() => {
         const spoilers = document.querySelectorAll<HTMLDivElement>(`.${id} .d-spoiler`);
         spoilers.forEach(s => s.addEventListener('click', () => s.classList.add('active')));
     });
+
+    function replaceEmoji(text: string) {
+        for (const emoji of Object.keys(emojis)) {
+            text = text.replaceAll(`:${emoji}:`, `<img src="${emojis[emoji]}" alt=":${emoji}:" class="emoji">`);
+        }
+
+        return text;
+    }
 </script>
 
-<span class="discord-markdown {id}">{@html discordMarkdown.toHTML(text, options)}</span>
+<span class="discord-markdown {id}">{@html replaceEmoji(discordMarkdown.toHTML(text, options))}</span>

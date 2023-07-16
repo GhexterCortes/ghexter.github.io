@@ -94,6 +94,10 @@
                 font-size: 0.8rem;
                 color: $lightColor;
             }
+
+            :global(.discord-markdown) {
+                line-height: 1.2rem;
+            }
         }
     }
 

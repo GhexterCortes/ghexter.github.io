@@ -82,6 +82,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>Cat++ (Ghex)</title>
+</svelte:head>
+
 <div class="content">
     <div class="title">
         <a title="Tap to change icon" href="javascript:void(0)" on:click={() => catIcon = getCatIcon()}><Icon icon={catIcon} class="icon"/>++</a>
