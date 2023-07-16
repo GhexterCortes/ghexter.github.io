@@ -7,7 +7,7 @@
     import catFaceLaugh from '@iconify/icons-fluent-emoji/cat-with-tears-of-joy';
     import catFaceSmirk from '@iconify/icons-fluent-emoji/cat-with-wry-smile';
     import LinkButton from '../assets/components/LinkButton.svelte';
-    import { discordProfileURL, gitHubProfileURL, instagramProfileURL } from '../assets/scripts/profile';
+    import { discordProfileURL, gitHubProfileURL, instagramProfileURL, threadsProfileURL } from '../assets/scripts/profile';
 
     let currentIndex = 0;
 
@@ -77,6 +77,7 @@
 
         .links {
             text-align: center;
+            margin-bottom: 10px;
         }
     }
 </style>
@@ -98,6 +99,9 @@
         </LinkButton>
         <LinkButton href={instagramProfileURL} target="_blank">
             <Icon icon="fa6-brands:instagram"/>
+        </LinkButton>
+        <LinkButton href={threadsProfileURL} target="_blank">
+            <Icon icon="simple-icons:threads"/>
         </LinkButton>
     </div>
 </div>

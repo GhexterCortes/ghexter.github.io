@@ -10,6 +10,7 @@ export const displayPictureURL = 'https://avatars.githubusercontent.com/u/690358
 export const discordProfileURL = `https://discordapp.com/users/${discordUserId}`;
 export const gitHubProfileURL = `https://github.com/${gitHubUsername}`;
 export const instagramProfileURL = `https://instagram.com/${discordUsername}`;
+export const threadsProfileURL = `https://threads.net/@${discordUsername}`;
 
 export const colors = {
     backgroundColor: colorsea('#111111'),

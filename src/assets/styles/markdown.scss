@@ -26,7 +26,7 @@
 
         &.active {
             color: currentColor;
-            user-select: text;
+            user-select: unset;
         }
     }
 
