@@ -9,9 +9,11 @@
     import LinkButton from '../assets/components/LinkButton.svelte';
     import { discordProfileURL, gitHubProfileURL, instagramProfileURL, threadsProfileURL } from '../assets/scripts/profile';
     import { onMount } from 'svelte';
+    import isMobile from 'is-mobile';
 
     let currentIndex = 0;
-    let title: HTMLAnchorElement;
+    let loaded = false;
+    let content: HTMLDivElement;
 
     function getCatIcon(): IconifyIcon {
         const icons = [catFace, catFaceLaugh, catFaceSmirk];
@@ -25,7 +27,13 @@
     let catIcon = getCatIcon();
 
     onMount(() => {
-        setTimeout(() => title.classList.remove('active'), 1000)
+        if (isMobile()) content.classList.add('no-transition');
+
+        setTimeout(() => {
+            loaded = true;
+
+            setTimeout(() => content.classList.remove('active'), 500);
+        }, 1000)
     });
 </script>
 
@@ -39,6 +47,7 @@
 
     .content {
         max-width: 700px;
+        min-height: 100%;
 
         .title {
             min-height: 30%;
@@ -50,11 +59,12 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             text-align: center;
+            transition: 0.2s;
+            font-size: 2rem;
 
             a {
                 display: flex;
                 align-items: center;
-                font-size: 2rem;
                 color: #e99b43;
                 text-decoration: none;
                 font-weight: 700;
@@ -100,7 +110,34 @@
 
         .links {
             text-align: center;
-            margin-bottom: 10px;
+            padding-bottom: 40px;
+        }
+
+        &.active {
+            overflow: hidden;
+
+            .hr {
+                opacity: 0;
+            }
+
+            :global(.header),
+            .links {
+                display: none;
+            }
+
+            .title {
+                min-height: 100%;
+                font-size: 4rem;
+            }
+        }
+
+        &.no-transition {
+            .title a {
+                :global(.icon),
+                .plvsplus {
+                    transition: unset;
+                }
+            }
         }
     }
 </style>
@@ -109,14 +146,14 @@
     <title>Cat++ (Ghex)</title>
 </svelte:head>
 
-<div class="content">
-    <div class="title">
-        <a class="active" bind:this={title} title="Tap to change icon" href="javascript:void(0)" on:click={() => catIcon = getCatIcon()}>
+<div class="content active" bind:this={content}>
+    <div class="title" style={isMobile() ? 'transition: none;' : ''}>
+        <a class:active={!loaded} title="Tap to change icon" href="javascript:void(0)" on:click={() => catIcon = getCatIcon()}>
             <Icon icon={catIcon} class="icon"/><span class="plvsplus">++</span>
         </a>
     </div>
 
-    <Header/>
+    <div class="header"><Header/></div>
 
     <div class="hr"></div>
     <div class="links">
