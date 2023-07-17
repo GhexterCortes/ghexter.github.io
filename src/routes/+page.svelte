@@ -10,14 +10,15 @@
     import { discordProfileURL, gitHubProfileURL, instagramProfileURL, threadsProfileURL } from '../assets/scripts/profile';
     import { onMount } from 'svelte';
     import isMobile from 'is-mobile';
+    import { shuffleArray } from '../assets/scripts/helpers';
 
     let currentIndex = 0;
     let loaded = false;
     let content: HTMLDivElement;
 
-    function getCatIcon(): IconifyIcon {
-        const icons = [catFace, catFaceLaugh, catFaceSmirk];
+    const icons = shuffleArray([catFace, catFaceLaugh, catFaceSmirk]);
 
+    function getCatIcon(): IconifyIcon {
         currentIndex++;
         if (currentIndex > (icons.length - 1)) currentIndex = 0;
 
