@@ -34,7 +34,7 @@
             loaded = true;
 
             setTimeout(() => content.classList.remove('active'), 500);
-        }, 1000)
+        }, 1000);
     });
 </script>
 
