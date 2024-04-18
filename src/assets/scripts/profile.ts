@@ -19,7 +19,7 @@ export const colors = {
     lightColor: colorsea('#EEEEEE'),
 };
 
-export const description = `Hello, I am Ghex, also known as Cat or Cat++. I am a hobbyist programmer. I like cats and computers. I love creating bugs whenever I open my IDE, I also like playing video games and listening to \`:pride-heart: gay\` pop music ||Hell nah, not tiktok music||
+export const description = `Hello, I am Ghex, also known as Cat or Cat++. I am a hobbyist programmer and a professional bug maker. I like cats and computers. I love creating bugs whenever I open my IDE, I also like playing video games and listening to pop music
 
 
 **I will update this website soon I swear**`;
