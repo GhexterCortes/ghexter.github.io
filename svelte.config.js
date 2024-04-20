@@ -9,6 +9,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
+			handleHttpError: () => {},
 			handleMissingId: 'warn'
 		}
 	}
