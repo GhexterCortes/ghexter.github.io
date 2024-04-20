@@ -1,14 +1,16 @@
 <script lang="ts">
-import { browser } from '$app/environment';
-import { page } from '$app/stores';
-import { error } from '@sveltejs/kit';
+    import { page } from '$app/stores';
     import '../../assets/styles/main.scss';
+    import { onMount } from 'svelte';
 
-    const key = browser && $page.url.searchParams.get('key');
-    if (!key) throw error(404);
+    const key = $page.url.searchParams.get('key') ?? 'NoKey';
+    let content: Blob|null = null;
 
-    const data = fetch(`https://cdn.sourceb.in/bins/${key}/0`).then(async r => await r.text());
-    const content = (async () => new Blob([await data], { type: 'text/html' }))();
+    onMount(async () => {
+        const data = await fetch(`https://cdn.sourceb.in/bins/${key}/0`).then(async r => await r.text());
+
+        content = new Blob([data], { type: 'text/html' });
+    });
 </script>
 
 <style lang="scss">
@@ -24,6 +26,8 @@ import { error } from '@sveltejs/kit';
 </style>
 
 <!-- svelte-ignore a11y-missing-attribute -->
-{#await content then html}
-    <iframe src={URL.createObjectURL(html)} frameborder="0"></iframe>
-{/await}
+{#if content}
+    <iframe src={URL.createObjectURL(content)} frameborder="0"></iframe>
+{:else}
+    <h1>Loading...</h1>
+{/if}
