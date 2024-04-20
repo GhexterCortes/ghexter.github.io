@@ -24,6 +24,7 @@
 	"type": "module",
 	"dependencies": {
 		"@discord-components/markdown": "^0.2.3",
+		"@falloutstudios/sourcebin.js": "^2.2.0",
 		"@iconify/icons-fluent-emoji": "^1.2.10",
 		"colorsea": "^1.2.1",
 		"is-mobile": "^4.0.0"
