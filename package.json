@@ -10,24 +10,24 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@iconify/svelte": "^3.1.0",
+		"@iconify/svelte": "^3.1.6",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"sass": "^1.58.3",
+		"sass": "^1.75.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
 		"svelte-gradient-typography": "^0.0.3",
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.5",
 		"vite": "^5.0.3"
 	},
 	"type": "module",
 	"dependencies": {
 		"@discord-components/markdown": "^0.2.3",
 		"@falloutstudios/sourcebin.js": "^2.2.0",
-		"@iconify/icons-fluent-emoji": "^1.2.10",
-		"colorsea": "^1.2.1",
+		"@iconify/icons-fluent-emoji": "^1.2.11",
+		"colorsea": "^1.2.2",
 		"is-mobile": "^4.0.0"
 	}
 }
