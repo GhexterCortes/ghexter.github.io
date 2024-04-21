@@ -1,16 +1,10 @@
 <script lang="ts">
-    import { page } from '$app/stores';
     import '../../assets/styles/main.scss';
-    import { onMount } from 'svelte';
 
-    const key = $page.url.searchParams.get('key') ?? 'NoKey';
-    let content: Blob|null = null;
+    export const prerender = true;
 
-    onMount(async () => {
-        const data = await fetch(`https://cdn.sourceb.in/bins/${key}/0`).then(async r => await r.text());
-
-        content = new Blob([data], { type: 'text/html' });
-    });
+    const key = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('key') : 'NoKey';
+    const data = fetch(`https://cdn.sourceb.in/bins/${key}/0`).then(async r => await r.text());
 </script>
 
 <style lang="scss">
@@ -26,8 +20,8 @@
 </style>
 
 <!-- svelte-ignore a11y-missing-attribute -->
-{#if content}
-    <iframe src={URL.createObjectURL(content)} frameborder="0"></iframe>
-{:else}
+{#await data}
     <h1>Loading...</h1>
-{/if}
+{:then content}
+    <iframe src={URL.createObjectURL(new Blob([content], { type: 'text/html' }))} frameborder="0"></iframe>
+{/await}
