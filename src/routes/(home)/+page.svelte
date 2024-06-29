@@ -5,6 +5,7 @@
     // @ts-expect-error
     import About from '$lib/markdowns/About.svx';
   import Contacts from '../../lib/components/Contacts.svelte';
+  import Repositories from '../../lib/components/Repositories.svelte';
 
     const data = PROFILE_DATA;
 </script>
@@ -12,6 +13,7 @@
 <div class="main-container">
     <main class="main-content">
         <ProfileHeader {data}/>
+        <Repositories data={data.repositories ?? []}/>
         <Accordion title="About" isOpen={true}>
             <About/>
         </Accordion>
