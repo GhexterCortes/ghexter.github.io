@@ -4,9 +4,7 @@
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
 
-    export const prerender = true;
-
-    const key = typeof window !== 'undefined' ? $page.url.searchParams.get('key') : 'NoKey';
+    const key = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('key') : 'NoKey';
 
     let metadata: { hits: number; title: string; description: string; created: string; }|null = null;
     let confirm = false;
