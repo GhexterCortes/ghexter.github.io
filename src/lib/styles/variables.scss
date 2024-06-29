@@ -12,3 +12,21 @@ $success: #06d6a0;
     border: 1px solid $border;
     border-radius: $radius;
 }
+
+@mixin PrimaryButton($bg: $primary, $color: $black, $hover: darken($primary, $amount: 5)) {
+    background: $bg;
+    color: $color;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: $hover;
+    }
+}
