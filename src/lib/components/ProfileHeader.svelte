@@ -143,24 +143,31 @@
             }
         }
 
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 400px) {
             .cover {
                 height: 150px;
             }
 
             .info {
-                padding: 0 1rem;
+                padding: 0;
+                flex-direction: column;
+                align-items: center;
 
                 .avatar {
-                    width: 100px;
-                    height: 100px;
-                    margin-top: -25px;
+                    margin-top: -70px;
                 }
 
                 .intro {
+                    width: 100%;
+                    text-align: center;
+
                     .name {
                         font-size: 1.4rem;
                     }
+                }
+
+                .pronouns {
+                    justify-content: center;
                 }
             }
         }
