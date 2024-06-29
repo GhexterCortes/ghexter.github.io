@@ -1,8 +1,14 @@
 $black: #070707;
 $white: #fafafa;
-$primary: #ff78b0;
+$primary: #f796be;
 $secondary: #e89eff;
 $tertiary: #f846bd;
 $warning: #f7a84f;
 $danger: #ef476f;
 $success: #06d6a0;
+
+@mixin Bordered($bg: rgba($black, $alpha: 0.7), $border: rgba($primary, $alpha: 0.2), $radius: 5px) {
+    background: $bg;
+    border: 1px solid $border;
+    border-radius: $radius;
+}

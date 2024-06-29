@@ -4,21 +4,16 @@
 
     export let isOpen = true;
     export let title: string;
+    export let animate = true;
 </script>
 
 <div class="accordion" class:open={isOpen}>
     <button class="accordion-button" on:click={() => isOpen = !isOpen}>
         <span class="accordion-text">{title}</span>
-        <span class="chevron">
-            {#if isOpen}
-                <Icon icon="lucide:chevron-down" inline/>
-            {:else}
-                <Icon icon="lucide:chevron-right" inline/>
-            {/if}
-        </span>
+        <span class="chevron"><Icon icon="lucide:chevron-right" inline/></span>
     </button>
     {#if isOpen}
-        <div class="accordion-content" in:slide={{ axis: 'y', duration: 200 }} out:slide={{ axis: 'y', duration: 200 }}>
+        <div class="accordion-content" in:slide={{ axis: 'y', duration: animate ? 200 : 0 }} out:slide={{ axis: 'y', duration: animate ? 200 : 0 }}>
             <slot/>
         </div>
     {/if}
@@ -29,7 +24,7 @@
 
     .accordion {
         background: rgba($white, $alpha: 0.05);
-        padding: 1rem;
+        padding: 1.2rem;
         border-radius: 1rem;
 
         .accordion-button {
@@ -39,14 +34,26 @@
             justify-content: space-between;
             font-size: 1.1rem;
             font-weight: 600;
-            color: rgba($white, $alpha: 0.9);
+            color: rgba($primary, $alpha: 0.9);
             border: none;
             background: transparent;
             cursor: pointer;
+
+            .chevron {
+                transition: transform 0.2s ease-in-out;
+            }
         }
 
         .accordion-content {
             margin-top: 1rem;
+        }
+
+        &.open {
+            .accordion-button {
+                .chevron {
+                    transform: rotate(90deg);
+                }
+            }
         }
     }
 </style>

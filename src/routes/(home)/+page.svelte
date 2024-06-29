@@ -4,6 +4,7 @@
     import ProfileHeader from '../../lib/components/ProfileHeader.svelte';
     // @ts-expect-error
     import About from '$lib/markdowns/About.svx';
+  import Contacts from '../../lib/components/Contacts.svelte';
 
     const data = PROFILE_DATA;
 </script>
@@ -14,6 +15,7 @@
         <Accordion title="About" isOpen={true}>
             <About/>
         </Accordion>
+        <Contacts data={data.links ?? []}/>
     </main>
 </div>
 
