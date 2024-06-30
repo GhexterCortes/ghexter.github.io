@@ -1,27 +1,39 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onDestroy, onMount } from 'svelte';
     import { fetchRepository, type RepositoryData } from '../scripts/helpers';
-  import Repository from './Repository.svelte';
+    import Repository from './Repository.svelte';
 
     export let data: string[];
 
     let repositories: Promise<(RepositoryData|null)[]> = Promise.resolve([]);
+    let scrollElement: HTMLDivElement;
+
+    function scrollHorizontally(event: WheelEvent) {
+        if (!scrollElement) return;
+
+        if (event.deltaY !== 0) {
+            event.preventDefault();
+            scrollElement.scrollBy({
+                left: event.deltaY < 0 ? -50 : 50,
+            });
+        }
+    }
 
     onMount(async () => {
         repositories = Promise.all(data.map(r => fetchRepository(r)));
-    })
+    });
 </script>
 
 <div class="repositories">
     <h1>Repositories</h1>
     {#await repositories}
-        <div class="skeleton">
+        <div class="skeleton" bind:this={scrollElement} on:wheel={scrollHorizontally}>
             {#each data as _, i}
                 <div class="skeleton-item" style="animation-delay: {i * 0.5}s;"></div>
             {/each}
         </div>
     {:then repositories}
-        <div class="content">
+        <div class="content" bind:this={scrollElement} on:wheel={scrollHorizontally}>
             {#each repositories as repository}
                 {#if repository}
                     <div class="repository-container">
