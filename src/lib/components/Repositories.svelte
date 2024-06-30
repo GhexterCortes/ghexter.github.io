@@ -74,6 +74,17 @@
             .repository-container {
                 width: $width;
                 height: $height;
+                flex-shrink: 0;
+            }
+        }
+
+        .skeleton,
+        .content {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            &::-webkit-scrollbar {
+                display: none;
             }
         }
     }
