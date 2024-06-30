@@ -41,7 +41,7 @@
 
 {#if !empty}
     <div class="repositories">
-        <h1>Repositories</h1>
+        <h1>Projects</h1>
         {#await repositories}
             <div class="skeleton" bind:this={scrollElement} on:wheel={scrollHorizontally}>
                 {#each data as _, i}
