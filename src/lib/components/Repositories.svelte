@@ -69,6 +69,7 @@
         .content {
             display: flex;
             overflow: auto;
+            border-radius: 1rem;
             gap: 1rem;
 
             .repository-container {
