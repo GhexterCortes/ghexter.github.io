@@ -74,7 +74,7 @@
     {:else}
         <div class="message" in:fade={{ duration: 200 }}>
             <h1>Note!</h1>
-            <p>You're about to render an HTML file from a <a href="https://sourceb.in/{key}">{metadata?.title ?? 'sourceb.in'}</a>. I do not own the file nor responsible for any content that will be rendered.</p>
+            <p>You're about to render an HTML file from <a href="https://sourceb.in/{key}">{metadata?.title ?? 'sourceb.in'}</a>. I do not own the file nor responsible for any content that will be rendered.</p>
             <button on:click={setConfirm}>Proceed</button>
         </div>
     {/if}
