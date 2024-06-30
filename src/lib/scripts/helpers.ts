@@ -1,3 +1,5 @@
+import { domCookie } from 'cookie-muncher';
+
 export interface RepositoryData {
     name: string;
     full_name: string;
@@ -29,12 +31,13 @@ export async function fetchRepository(url: string): Promise<RepositoryData|null>
         .then(async res => res.ok ? await res.json() : null)
         .catch(() => null);
 
-    if (typeof window.localStorage !== 'undefined') {
+    if (typeof window !== 'undefined') {
         if (data) {
-            window.localStorage.setItem(url, JSON.stringify(data));
+            domCookie.set({ name: url, value: JSON.stringify(minifyRepositoryObject(data)) });
         } else {
-            data = window.localStorage.getItem(url)
-                ? JSON.parse(window.localStorage.getItem(url)!)
+            const cookie = domCookie.get(url);
+            data = cookie
+                ? JSON.parse(cookie.value!)
                 : null;
         }
 
@@ -42,4 +45,30 @@ export async function fetchRepository(url: string): Promise<RepositoryData|null>
     }
 
     return data;
+}
+
+export function minifyRepositoryObject(data: RepositoryData): RepositoryData {
+    return {
+        name: data.name,
+        full_name: data.full_name,
+        owner: {
+            login: data.owner.login,
+            avatar_url: data.owner.avatar_url,
+            html_url: data.owner.html_url,
+        },
+        html_url: data.html_url,
+        description: data.description,
+        created_at: data.created_at,
+        updated_at: data.updated_at,
+        homepage: data.homepage,
+        stargazers_count: data.stargazers_count,
+        watchers_count: data.watchers_count,
+        language: data.language,
+        archived: data.archived,
+        license: {
+            key: data.license.key,
+            name: data.license.name,
+            spdx_id: data.license.spdx_id,
+        }
+    };
 }

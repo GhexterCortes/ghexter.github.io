@@ -24,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"cookie-muncher": "^0.4.4",
 		"fast-average-color": "^9.4.0"
 	}
 }
