@@ -12,6 +12,14 @@
     function scrollHorizontally(event: WheelEvent) {
         if (!scrollElement) return;
 
+        const isScrollable = scrollElement.scrollWidth > scrollElement.clientWidth;
+        const isScrollEnd = scrollElement.scrollLeft + scrollElement.clientWidth >= scrollElement.scrollWidth;
+        const isScrollStart = scrollElement.scrollLeft <= 0;
+
+        if (!isScrollable) return;
+        if (isScrollStart && event.deltaY < 0) return;
+        if (isScrollEnd && event.deltaY > 0) return;
+
         if (event.deltaY !== 0) {
             event.preventDefault();
             scrollElement.scrollBy({
