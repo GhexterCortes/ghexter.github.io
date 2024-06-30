@@ -7,6 +7,7 @@
 
     let repositories: Promise<(RepositoryData|null)[]> = Promise.resolve([]);
     let scrollElement: HTMLDivElement;
+    let empty = false;
 
     function scrollHorizontally(event: WheelEvent) {
         if (!scrollElement) return;
@@ -20,30 +21,38 @@
     }
 
     onMount(async () => {
-        repositories = Promise.all(data.map(r => fetchRepository(r)));
+        repositories = Promise.all(data.map(r => fetchRepository(r)))
+            .then(data => {
+                data = data.filter(Boolean);
+
+                if (!data.length) empty = true;
+                return data;
+            });
     });
 </script>
 
-<div class="repositories">
-    <h1>Repositories</h1>
-    {#await repositories}
-        <div class="skeleton" bind:this={scrollElement} on:wheel={scrollHorizontally}>
-            {#each data as _, i}
-                <div class="skeleton-item" style="animation-delay: {i * 0.5}s;"></div>
-            {/each}
-        </div>
-    {:then repositories}
-        <div class="content" bind:this={scrollElement} on:wheel={scrollHorizontally}>
-            {#each repositories as repository}
-                {#if repository}
-                    <div class="repository-container">
-                        <Repository data={repository}/>
-                    </div>
-                {/if}
-            {/each}
-        </div>
-    {/await}
-</div>
+{#if !empty}
+    <div class="repositories">
+        <h1>Repositories</h1>
+        {#await repositories}
+            <div class="skeleton" bind:this={scrollElement} on:wheel={scrollHorizontally}>
+                {#each data as _, i}
+                    <div class="skeleton-item" style="animation-delay: {i * 0.5}s;"></div>
+                {/each}
+            </div>
+        {:then repositories}
+            <div class="content" bind:this={scrollElement} on:wheel={scrollHorizontally}>
+                {#each repositories as repository}
+                    {#if repository}
+                        <div class="repository-container">
+                            <Repository data={repository}/>
+                        </div>
+                    {/if}
+                {/each}
+            </div>
+        {/await}
+    </div>
+{/if}
 
 <style lang="scss">
     @import '$lib/styles/variables.scss';

@@ -22,10 +22,10 @@ export interface RepositoryData {
     };
 }
 
-export function fetchRepository(url: string): Promise<RepositoryData|null> {
+export async function fetchRepository(url: string): Promise<RepositoryData|null> {
     const [owner, name] = url.split('/');
 
-    let data = fetch(`https://api.github.com/repos/${owner}/${name}`)
+    let data = await fetch(`https://api.github.com/repos/${owner}/${name}`)
         .then(async res => res.ok ? await res.json() : null)
         .catch(() => null);
 
@@ -37,6 +37,8 @@ export function fetchRepository(url: string): Promise<RepositoryData|null> {
                 ? JSON.parse(window.localStorage.getItem(url)!)
                 : null;
         }
+
+        if (Object.keys(data || {}).length === 0) data = null;
     }
 
     return data;
