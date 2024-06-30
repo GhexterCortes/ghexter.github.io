@@ -12,7 +12,7 @@
                 {data.name}
             </a>
         </h3>
-        <div class="description">{data.description}</div>
+        <div class="description">{data.description || 'No description'}</div>
     </div>
     <div class="stats">
         <div class="lang">{data.language}</div>
@@ -62,6 +62,8 @@
                 margin-top: 0.5rem;
                 font-size: 0.9rem;
                 color: rgba($white, $alpha: 0.5);
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 
