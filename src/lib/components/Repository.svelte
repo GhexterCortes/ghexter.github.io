@@ -18,10 +18,10 @@
         <div class="lang">{data.language}</div>
         <div class="numbers">
             <span class="stars">
-                <Icon icon="ph:star-fill" inline/> {data.stargazers_count}
+                <Icon icon="ph:star-fill" inline class="icon"/> {data.stargazers_count}
             </span>
-            <span class="forks">
-                <Icon icon="ph:repo-forked-fill" inline/><Icon icon="mingcute:balance-fill" inline/> {data.license.spdx_id}
+            <span class="license">
+                <Icon icon="mingcute:balance-fill" inline class="icon"/> {data.license.spdx_id}
             </span>
         </div>
     </div>
@@ -77,6 +77,18 @@
                 display: flex;
                 align-items: center;
                 gap: 0.5rem;
+
+                :global(.icon) {
+                    font-size: 0.8rem;
+                }
+
+                .stars :global(.icon) {
+                    color: $warning;
+                }
+
+                .license :global(.icon) {
+                    color: $primary;
+                }
             }
         }
     }
