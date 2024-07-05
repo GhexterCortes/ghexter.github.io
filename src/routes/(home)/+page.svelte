@@ -1,11 +1,13 @@
 <script lang="ts">
     import { PROFILE_DATA } from '$lib/scripts/profile';
-    import Accordion from '../../lib/components/Accordion.svelte';
-    import ProfileHeader from '../../lib/components/ProfileHeader.svelte';
+    import Accordion from '$lib/components/Accordion.svelte';
+    import ProfileHeader from '$lib/components/ProfileHeader.svelte';
     // @ts-expect-error
     import About from '$lib/markdowns/About.svx';
-  import Contacts from '../../lib/components/Contacts.svelte';
-  import Repositories from '../../lib/components/Repositories.svelte';
+    // @ts-expect-error
+    import SupportPage from '$lib/markdowns/SupportPage.svx';
+    import Contacts from '$lib/components/Contacts.svelte';
+    import Repositories from '$lib/components/Repositories.svelte';
 
     const data = PROFILE_DATA;
 </script>
@@ -14,9 +16,14 @@
     <main class="main-content">
         <ProfileHeader {data}/>
         <Repositories data={data.repositories ?? []}/>
-        <Accordion title="About" isOpen={true}>
-            <About/>
-        </Accordion>
+        <div class="accordions">
+            <Accordion title="About" isOpen={true}>
+                <About/>
+            </Accordion>
+            <Accordion title="Support Me" isOpen={false}>
+                <SupportPage/>
+            </Accordion>
+        </div>
         <Contacts data={data.links ?? []}/>
     </main>
 </div>
@@ -37,6 +44,12 @@
             min-height: 100%;
             max-width: 700px;
             padding: 0 1rem;
+
+            .accordions {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     }
 </style>
