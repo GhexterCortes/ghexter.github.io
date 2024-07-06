@@ -3,5 +3,5 @@
     import Icon from '@iconify/svelte';
 </script>
 
-A financial support is always appreciated to support all of my ideas and projects. Buy me a coffee only if you like to <Icon icon="fluent-emoji:pleading-face"/>!
+A financial support is always appreciated to support all of my ideas and projects. Buy me a coffee only if you like to <Icon icon="fluent-emoji:white-heart"/>!
 <BuyMeCoffee/>
