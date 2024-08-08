@@ -51,8 +51,9 @@ export const PROFILE_DATA: ProfileData = {
         }
     ],
     repositories: [
-        'TheNorthSolution/Reciple',
+        'thenorthsolution/Reciple',
+        'thenorthsolution/prtyprnt',
+        'TheNorthSolution/djs-utils',
         'FalloutStudios/fallout-utility',
-        'TheNorthSolution/djs-utils'
     ]
 };
