@@ -53,6 +53,7 @@ export const PROFILE_DATA: ProfileData = {
     repositories: [
         'thenorthsolution/Reciple',
         'thenorthsolution/prtyprnt',
+        'catplvsplus/lrclib.js',
         'TheNorthSolution/djs-utils',
         'FalloutStudios/fallout-utility',
     ]
