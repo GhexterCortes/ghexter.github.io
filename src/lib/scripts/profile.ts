@@ -1,5 +1,5 @@
 export const displayName = 'Cat++';
-export const gitHubUsername = 'NotGhex';
+export const gitHubUsername = 'catplvsplus';
 export const discordUsername = 'catplvsplus';
 export const discordUserId = '749120018771345488';
 
