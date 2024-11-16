@@ -7,6 +7,8 @@ export const discordProfileURL = `https://discord.com/users/${discordUserId}`;
 export const gitHubProfileURL = `https://github.com/${gitHubUsername}`;
 export const instagramProfileURL = `https://instagram.com/${discordUsername}`;
 export const threadsProfileURL = `https://threads.net/@${discordUsername}`;
+export const xProfileURL = `https://x.com/${discordUsername}`;
+export const blueskyProfileURL = `https://bsky.app/profile/ghex.is-a.dev`;
 
 export interface ProfileData {
     name: string;
@@ -48,6 +50,16 @@ export const PROFILE_DATA: ProfileData = {
             name: 'Threads',
             icon: 'bi:threads',
             url: threadsProfileURL
+        },
+        {
+            name: 'X',
+            icon: 'bi:twitter-x',
+            url: xProfileURL
+        },
+        {
+            name: 'Bluesky',
+            icon: 'ri:bluesky-fill',
+            url: blueskyProfileURL
         }
     ],
     repositories: [
